@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { OwnerComponent } from './owner/owner.component';
 import { UserComponent } from './user/user.component';
 import { SheradModule } from './sherad/sherad.module';
+import { LoginComponent } from './user/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     OwnerComponent,
-    UserComponent
+    UserComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
