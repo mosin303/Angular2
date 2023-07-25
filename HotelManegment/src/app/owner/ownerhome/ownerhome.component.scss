@@ -1,0 +1,14 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+  p{
+    flex: content;
+  }
+
+  .container{
+    background-image: url('/assets/images/hotel-list-10.jpg');
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }

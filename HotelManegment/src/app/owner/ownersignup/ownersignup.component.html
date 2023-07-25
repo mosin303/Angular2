@@ -1,0 +1,61 @@
+<div class="container">
+    <mat-toolbar >
+        <span class="example-spacer">HOTALS </span>
+        <p>WellCome To Sign Up</p>
+         <button mat-raised-button color="accent" routerLink="/home">Home</button>
+    </mat-toolbar> <br>
+    
+
+<div>
+    <mat-card class="example-form">
+        <mat-card-header>
+          <h1> Sign Up </h1>
+        </mat-card-header>
+        <mat-card-content> 
+            <form  [formGroup]="signinform">
+                <mat-form-field class="example-full-width" >
+                  <mat-label>User Name</mat-label>
+                  <input matInput formControlName="id" >
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" >
+                    <mat-label>MobailNo</mat-label>
+                    <input matInput formControlName="mobNo" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Pan</mat-label>
+                    <input matInput formControlName="pan" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" >
+                  </mat-form-field>
+                  <div class="gender">
+                    <mat-label>Gender</mat-label><br>
+                  <mat-radio-group formControlName="gender" aria-label=" Gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                    <mat-radio-button value="Other">Other</mat-radio-button>
+                  </mat-radio-group>
+                  </div><br>
+                <div class="example-button-row">
+                   
+                    <button  mat-raised-button color="accent" class="sumit-btn" [disabled]="!signinform.valid" (click)="submit()">Submit</button>&nbsp;
+                    <button mat-raised-button color="accent" class="login-btn"  (click)="signIn()">New Login-Btn</button>
+             </div> 
+            </form>
+              
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    
+
+ 

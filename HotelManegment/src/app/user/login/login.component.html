@@ -1,8 +1,8 @@
-
+<div class="container">
 <mat-toolbar color="primary">
     <span class="example-spacer">MY HOTALS </span>
     <p>WellCome To Login</p>
-    <a routerLink="/home">Home</a>
+     <button mat-raised-button color="accent" routerLink="/home">Home</button>
 </mat-toolbar> <br>
 
 <div>
@@ -14,37 +14,22 @@
         <form  [formGroup]="loginform">
             <mat-form-field class="example-full-width" >
               <mat-label>User Name</mat-label>
-              <input matInput formControlName="id" >
+              <input matInput formControlName="username" >
             </mat-form-field>
-            <mat-form-field class="example-full-width">
-                <mat-label>Name</mat-label>
-                <input matInput formControlName="name" >
-              </mat-form-field>
-              <mat-form-field class="example-full-width" >
-                <mat-label>MobailNo</mat-label>
-                <input matInput formControlName="mobNo" >
-              </mat-form-field>
+            
               <mat-form-field class="example-full-width">
                 <mat-label>Password</mat-label>
                 <input matInput formControlName="password" >
               </mat-form-field>
-              <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input matInput type="email" formControlName="email" >
-              </mat-form-field>
-              <div>
-              <mat-radio-group formControlName="gender" aria-label=" Gender">
-                <mat-radio-button value="male">Male</mat-radio-button>
-                <mat-radio-button value="female">Female</mat-radio-button>
-                <mat-radio-button value="Other">Other</mat-radio-button>
-              </mat-radio-group>
-              </div>
+ 
             <div class="example-button-row">
-                <button mat-button color="primary">Primary</button>
-                <button mat-button color="accent">Accent</button>
+               
+                <button mat-button class="sumit-btn" [disabled]="!loginform.valid" (click)="submit()">Submit</button>&nbsp;
+                <button mat-button class="login-btn" routerLink="/signin" >Signin-Btn</button>
          </div> 
         </form>
           
     </mat-card-content>
   </mat-card>
+</div>
 </div>

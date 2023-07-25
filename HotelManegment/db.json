@@ -1,19 +1,46 @@
 {
-  "posts": [
+  "admin": [],
+  "user": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "Username": "mosin",
+      "Name": "mosin mulla",
+      "Mobile": "5362525235",
+      "Password": "mosin7",
+      "Email": "mosinmulla553@gmail.com",
+      "Gender": "male",
+      "id": 1
+    },
+    {
+      "Username": "salman",
+      "Name": "salman mulla",
+      "Mobile": "8458586665",
+      "Password": "salman123",
+      "Email": "mosinmulla553@gmail.com",
+      "Gender": "male",
+      "id": 2
+    },
+    {
+      "Username": "salman",
+      "Name": "salman mulla",
+      "Mobile": "7894561235",
+      "Pan": "MKJJS1234M",
+      "Password": "mOSIN@723",
+      "Email": "mosinmulla553@gmail.com",
+      "Gender": "male",
+      "id": 3
     }
   ],
-  "comments": [
+  "owner": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "Username": "mosin ",
+      "Name": "mosin mula",
+      "Mobile": "7581582554",
+      "Pan": "ABMAS2345M",
+      "Password": "Mosin@123",
+      "Email": "mosinmulla553@gmail.com",
+      "Gender": "male",
+      "id": 1
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "hotelDetails": []
 }

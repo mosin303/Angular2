@@ -5,24 +5,32 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
-import { OwnerComponent } from './owner/owner.component';
+ 
 import { UserComponent } from './user/user.component';
 import { SheradModule } from './sherad/sherad.module';
 import { LoginComponent } from './user/login/login.component';
+import { SigninComponent } from './user/signin/signin.component';
+import { UsersuccessComponent } from './user/usersuccess/usersuccess.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    OwnerComponent,
+    
     UserComponent,
-    LoginComponent
+    LoginComponent,
+    SigninComponent,
+    UsersuccessComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    SheradModule
+    SheradModule,
+    ToastrModule.forRoot()
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

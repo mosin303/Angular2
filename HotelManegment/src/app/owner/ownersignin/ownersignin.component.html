@@ -1,0 +1,36 @@
+
+<div class="container">
+<mat-toolbar color="primary">
+    <span class="example-spacer">MY HOTALS </span>
+    <p>WellCome To Login</p>
+     <button mat-raised-button color="accent" routerLink="/home">Home</button>
+</mat-toolbar> <br>
+
+<div>
+<mat-card class="example-form">
+    <mat-card-header>
+        <h1>Login</h1>
+    </mat-card-header>
+    <mat-card-content> 
+        <form  [formGroup]="loginform">
+            <mat-form-field class="example-full-width" >
+              <mat-label>User Name</mat-label>
+              <input matInput formControlName="username" >
+            </mat-form-field>
+            
+              <mat-form-field class="example-full-width">
+                <mat-label>Password</mat-label>
+                <input matInput formControlName="password" >
+              </mat-form-field>
+ 
+            <div class="example-button-row">
+               
+                <button mat-button class="sumit-btn" [disabled]="!loginform.valid" (click)="submit()">Submit</button>&nbsp;
+                <button mat-button class="login-btn"  (click)="signUp()" >SignUp-Btn</button>
+         </div> 
+        </form>
+          
+    </mat-card-content>
+  </mat-card>
+</div>
+</div>

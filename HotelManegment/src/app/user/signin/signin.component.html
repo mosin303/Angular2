@@ -1,0 +1,61 @@
+<div class="container">
+<mat-toolbar class="bar" color="primary">
+    <span class="example-spacer"><h1> <b> HOTALS</b> </h1></span>
+    <p>WellCome To Signin </p>
+    <!-- <button (click)="journey('admin')"> Admin</button>
+    <button (click)="journey('owner')">Owner</button>
+    <button (click)="journey('user')">User</button> -->
+    <button mat-raised-button color="accent" (click)="home()">Home</button>
+    <button mat-raised-button color="accent" (click)="login()">Login</button>
+</mat-toolbar><br>
+<div>
+    <mat-card class="example-form">
+        <mat-card-header>
+          <h1> Sign In </h1>
+        </mat-card-header>
+        <mat-card-content> 
+            <form  [formGroup]="signinform">
+                <mat-form-field class="example-full-width" >
+                  <mat-label>User Name</mat-label>
+                  <input matInput formControlName="id" >
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="name" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" >
+                    <mat-label>MobailNo</mat-label>
+                    <input matInput formControlName="mobNo" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width" >
+                    <mat-label>Pancard No</mat-label>
+                    <input matInput formControlName="pan" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password" >
+                  </mat-form-field>
+                  <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email" >
+                  </mat-form-field>
+                  <div class="gender">
+                    <mat-label>Gender</mat-label><br>
+                  <mat-radio-group formControlName="gender" aria-label=" Gender">
+                    <mat-radio-button value="male">Male</mat-radio-button>
+                    <mat-radio-button value="female">Female</mat-radio-button>
+                    <mat-radio-button value="Other">Other</mat-radio-button>
+                  </mat-radio-group>
+                  </div><br>
+                <div class="example-button-row">
+                   
+                    <button  mat-raised-button color="accent" class="sumit-btn" [disabled]="!signinform.valid" (click)="submit()">Submit</button>&nbsp;
+                    <button mat-raised-button color="accent" class="login-btn" routerLink="/login" >New Login-Btn</button>
+             </div> 
+            </form>
+              
+        </mat-card-content>
+      </mat-card>
+    </div>
+</div>
+ 

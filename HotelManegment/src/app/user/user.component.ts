@@ -33,4 +33,6 @@ export class UserComponent {
   login(){
     this.router.navigateByUrl('login');
   }
+   
+  
 }

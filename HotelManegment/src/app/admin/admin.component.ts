@@ -34,4 +34,7 @@ export class AdminComponent {
     this.router.navigateByUrl('home');
 
   }
+  login(){
+    this.router.navigateByUrl('login');
+  }
 }

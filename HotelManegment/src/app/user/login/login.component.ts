@@ -20,13 +20,14 @@ export class LoginComponent {
   }
   formDef() {
     this.loginform = this.fB.group({
-      id: ['',[Validators.required]],
-      name: ['', [Validators.required, Validators.pattern("[a-zA-Z ]*$")]],
-      mobNo: ['', [Validators.required,Validators.pattern("[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
-      password: ['',[Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
-      email: ['',[Validators.required]],
-      gender:['',[Validators.required]],
+      username: ['',[Validators.required]],
+      password: ['',[Validators.required, Validators.minLength(6),Validators.pattern("^[a-zA-Z0-9]*$")]],
+       
     });
   }
 
+  submit(){
+    console.log(this.loginform.value);
+
+}
 }

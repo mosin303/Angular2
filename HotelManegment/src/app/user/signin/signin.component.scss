@@ -1,0 +1,64 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .bar{
+    width: auto;
+    background-image: url('/assets/images/hotel-bg.jpg');
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    
+     
+  }
+
+  p{
+    flex: content;
+    
+  }
+  h1{
+    flex:content;
+    font-size:40px;
+    
+  }
+
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: auto;
+    height: auto;
+     margin-left: auto; 
+     margin-right: auto;
+    border:5px solid rgb(6, 150, 37);
+    background-image: url('/assets/images/hotel-list-3.jpg');
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+
+  // button{
+  //   border:1px solid green  ;
+  // }
+  .sumit-btn{
+    background-color: rgb(232, 129, 44);
+  }
+
+  .container{
+    background-image: url('/assets/images/hotel-bg.jpg');
+      height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+  .gender{
+    background-color : rgb(138, 247, 140);
+    font-size: medium;
+     
+  }
