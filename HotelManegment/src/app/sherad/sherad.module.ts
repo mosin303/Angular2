@@ -11,7 +11,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
- 
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { HttpClientModule } from '@angular/common/http';
       MatFormFieldModule,
       HttpClientModule,
       ToastrModule,
-
+      MatGridListModule,
+      MatMenuModule,
 
 
   ],
@@ -51,6 +53,8 @@ import { HttpClientModule } from '@angular/common/http';
       MatFormFieldModule,
       HttpClientModule,
       ToastrModule,
+      MatGridListModule,
+      MatMenuModule,
   ]
 })
 export class SheradModule { }

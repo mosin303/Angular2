@@ -40,7 +40,156 @@
       "Email": "mosinmulla553@gmail.com",
       "Gender": "male",
       "id": 1
+    },
+    {
+      "Username": "salman",
+      "Name": "salman mulla",
+      "Mobile": "7581582555",
+      "Pan": "ABMAS2345M",
+      "Password": "Salman@123",
+      "Email": "mosinmulla553@gmail.com",
+      "Gender": "male",
+      "id": 2
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin mulla",
+      "Mobile": "4252868692",
+      "Pan": "ASDFG1234S",
+      "Password": "mOSIN123@",
+      "Email": "mosin34@.gamil.com",
+      "Gender": "male",
+      "id": 3
+    },
+    {
+      "Username": "sahil",
+      "Name": "sahil mulla",
+      "Mobile": "1547862594",
+      "Pan": "asder1225s",
+      "Password": "Sahil@123",
+      "Email": "sahil23@.gmail.com",
+      "Gender": "male",
+      "id": 4
+    },
+    {
+      "Username": "tanveer",
+      "Name": "tanveer mulla",
+      "Mobile": "8956856655",
+      "Pan": "nhjhm1234n",
+      "Password": "Tanveer@123",
+      "Email": "tanveer@.gmail.com",
+      "Gender": "male",
+      "id": 5
+    },
+    {
+      "Username": "maaj",
+      "Name": "maaj korbu",
+      "Mobile": "7859585885",
+      "Pan": "asedf5585m",
+      "Password": "Maaj@123",
+      "Email": "maaj123@gmail.com",
+      "Gender": "male",
+      "id": 6
+    },
+    {
+      "Username": "aslam",
+      "Name": "aslam ichalkharji",
+      "Mobile": "8965959558",
+      "Pan": "asedd4252s",
+      "Password": "Aslam@123",
+      "Email": "aslam553@gmail.com",
+      "Gender": "male",
+      "id": 7
+    },
+    {
+      "Name": "",
+      "Email": "",
+      "Menu": "",
+      "Discription": "",
+      "Address": "",
+      "Rooms": "",
+      "Workers": "",
+      "id": 8
     }
   ],
-  "hotelDetails": []
+  "hotels": [
+    {
+      "name": "Green Valey",
+      "phone": 8888696921,
+      "email": "Green@gmail.com",
+      "menu": "Manchurian",
+      "discription": "The Best manchurian in the world",
+      "address": "Nehru Chauk , Amaravati - 421212",
+      "arooms": 300,
+      "workers": 20,
+      "id": 1
+    },
+    {
+      "name": "Five Star Hotel",
+      "phone": 8888981212,
+      "email": "star@gmail.com",
+      "menu": "Coffee",
+      "discription": "The Best Coffee you will ever have !!",
+      "address": "Chatrapati Shivaji Nagar, Pune - 431213",
+      "arooms": 25,
+      "workers": 30,
+      "img": "hotelroom",
+      "id": 2
+    },
+    {
+      "name": "Hotel Lotus",
+      "phone": 7499269640,
+      "email": "Tanaya@gmail.com",
+      "menu": "Chat",
+      "discription": "The best Chat in the whole universe !!",
+      "address": "pundalik baba nagar, \nAmaravati - 444604",
+      "arooms": 200,
+      "workers": 200,
+      "img": "hotel",
+      "id": 3
+    },
+    {
+      "name": "Taj Hotel",
+      "phone": 9421322354,
+      "email": "Taj@gmail.com",
+      "menu": "Dal Tadka",
+      "discription": "The greatest hotel of all time",
+      "address": "Chatrapti sambhaji maharaj - 431213",
+      "arooms": 300,
+      "workers": 600,
+      "id": 4
+    },
+    {
+      "name": "Green Valey",
+      "phone": 8888696921,
+      "email": "Green@gmail.com",
+      "menu": "Manchurian",
+      "discription": "The Best manchurian in the world",
+      "address": "Nehru Chauk , Amaravati - 421212",
+      "arooms": 300,
+      "workers": 20,
+      "id": 1
+    },
+    {
+      "name": "fhjhgh",
+      "phone": 584564,
+      "email": "fdslajdkhj",
+      "menu": "hkjdskl;fhjdsk",
+      "discription": "lkjfdsl;kjalkf",
+      "address": "lkjhfdslk;jh",
+      "arooms": 45,
+      "workers": 5665,
+      "id": 5
+    },
+    {
+      "name": "Minar Hotel",
+      "email": "minarhotel@gmail.com",
+      "menu": "non veag",
+      "discription": "use full hotel",
+      "address": "Mina Rood  ,Minar Hotel, mumbai",
+      "arooms": 101,
+      "workers": 40,
+      "id": 6
+    }
+  ]
 }

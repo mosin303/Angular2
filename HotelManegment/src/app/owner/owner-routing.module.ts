@@ -5,6 +5,7 @@ import { OwnersuccessComponent } from './ownersuccess/ownersuccess.component';
 import { OwnerhomeComponent } from './ownerhome/ownerhome.component';
 import { OwnerhotelregistrationComponent } from './ownerhotelregistration/ownerhotelregistration.component';
 import { OwnersigninComponent } from './ownersignin/ownersignin.component';
+import { HoteldetailsComponent } from './hoteldetails/hoteldetails.component';
 
 const routes: Routes = [
   {path:'',component:OwnerhomeComponent},
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path:'ownerSignIn',component:OwnersigninComponent},
   {path:'ownerSuccess',component:OwnersuccessComponent},
   {path:'ownrhotelristation',component:OwnerhotelregistrationComponent},
- 
+ { path:'hoteldetails',component:HoteldetailsComponent},
 ];
 
 @NgModule({

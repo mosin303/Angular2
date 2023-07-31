@@ -18,6 +18,8 @@ home(){
 login(){
   this.router.navigateByUrl('owner/ownerSignUp');
 }
-
+signIn(){
+  this.router.navigateByUrl('owner/ownerSignIn');
+}
 
 }

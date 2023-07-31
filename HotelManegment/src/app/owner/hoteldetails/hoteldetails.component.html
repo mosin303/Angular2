@@ -1,0 +1,32 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <span class="example-spacer">HOTALS </span>
+    <p>WellCome To Hotel</p>
+    <button mat-raised-button color="accent" routerLink="/home">Home</button>
+    <button mat-raised-button color="accent" routerLink="/owner/ownrhotelristation">New Ristation</button>
+    <button mat-raised-button color="accent" class="login-btn" (click)="getApi()">getApi-Btn</button>
+    <button mat-raised-button color="accent" class="login-btn" (click)="logout()">Logout-Btn</button>
+  </mat-toolbar> <br>
+
+<!-- -------------------------------------------------------------------------------------- -->
+
+  <!-- formHeading : any[]= [ "Name", "Email","Menu","Discription", "Address","Rooms","Workers"]; -->
+  <div *ngIf="hotelForm" class="table-container">
+    <table>
+      <tr>
+        <th *ngFor="let heading of formHeading"> {{heading}} </th>
+      <tr *ngFor="let formData of hotelForm">
+        <td>{{formData.name}}</td>
+        <td>{{formData.email}}</td>
+        <td>{{formData.menu}}</td>
+        <td>{{formData.discription}}</td>
+        <td>{{formData.address}}</td>
+        <td>{{formData.arooms}}</td>
+        <td>{{formData.workers}}</td>
+      </tr>
+    </table>
+  </div>
+  <!-- <th *ngFor ="let heading of tableHeading">{{heading}}</th>
+       </tr> 
+       <tr *ngFor ="let tableData of formData"> 
+        <td>{{tableData.id}}</td> -->

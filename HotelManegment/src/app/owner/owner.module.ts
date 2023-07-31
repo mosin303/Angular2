@@ -8,6 +8,7 @@ import { OwnersignupComponent } from './ownersignup/ownersignup.component';
 import { OwnersuccessComponent } from './ownersuccess/ownersuccess.component';
 import { SheradModule } from '../sherad/sherad.module';
 import { OwnersigninComponent } from './ownersignin/ownersignin.component';
+import { HoteldetailsComponent } from './hoteldetails/hoteldetails.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { OwnersigninComponent } from './ownersignin/ownersignin.component';
     OwnerhotelregistrationComponent,
     OwnersignupComponent,
     OwnersuccessComponent,
-    OwnersigninComponent
+    OwnersigninComponent,
+    HoteldetailsComponent
   ],
   imports: [
     CommonModule,

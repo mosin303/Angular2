@@ -14,4 +14,18 @@ export class CommonApiCallService {
 let url = this.url + endPoint;
 return this.http.post(url,formdata);
   }
+
+  getApiCall(endPoint:string){
+    let url = this.url + endPoint ;
+    return this.http.get(url);
+  }
+  putApiCall(endPoint:string, formData:any, id:any){
+    let url = this.url + endPoint +'/' + id;
+    return this.http.put(url, formData)
+  }
+  patchApiCall(endPoint:any,data:any,id:number) {
+    let url = this.url + endPoint + '/' + id;
+    return this.http.patch(url,data) 
+  }
+
 }
