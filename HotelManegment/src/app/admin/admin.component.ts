@@ -35,6 +35,12 @@ export class AdminComponent {
 
   }
   login(){
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('admin/login');
   }
+  signup(){
+    this.router.navigateByUrl('admin/signup');
+}
+   registration(){
+  this.router.navigateByUrl('admin/registration');
+}
 }

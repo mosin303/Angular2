@@ -19,7 +19,7 @@ export class OwnerhotelregistrationComponent {
   endpoint!: string;
   formData:any;
   fData:any;
-  tableHeading : any[]= ["id",' fullName ', "mobNo",  "email", "city","address","gender","password","confirmPassword"];
+   
   // constructor( private router:Router,
   //   private fb:FormBuilder,
   //   private apidata:CommonApiCallService,){}
@@ -42,27 +42,29 @@ export class OwnerhotelregistrationComponent {
   formdata(){
   this.hotelForm = this.builder.group({
     name : ['',[Validators.required]],
+    ownerName : ['',[Validators.required]],
     phone :['',[Validators.required]],
     email :['',[Validators.required]],
     menu : ['',[Validators.required]],
     discription : ['',[Validators.required]],
     address : ['',[Validators.required]],
     arooms : ['',[Validators.required]],
-    workers : ['',[Validators.required]],
+    
   })
 }
 
-  hotelRegistr(){
-    let urlEndPointToGetData = 'hotels';
+onSubmit(){
+    
       let request = {
         name : this.hotelForm.value.name,
-        phone : this.hotelForm.value.phon,
+        ownerName : this.hotelForm.value.ownerName,
+        phone : this.hotelForm.value.phone,
         email : this.hotelForm.value.email,
         menu:this.hotelForm.value.menu,
         discription : this.hotelForm.value.discription,
         address : this.hotelForm.value.address,
         arooms : this.hotelForm.value.arooms,
-        workers : this.hotelForm.value.workers,
+         
       }
     if(this.hotelForm.valid) {
         console.log(this. hotelForm.value);
@@ -82,6 +84,8 @@ export class OwnerhotelregistrationComponent {
       })
      }
     }
+    }
+    
     // hotelRegistr(){
     //  let urlEndPointToGetData = 'hotels';
     //  this.apiCallService.getApiCall(urlEndPointToGetData).subscribe(data =>{
@@ -90,40 +94,11 @@ export class OwnerhotelregistrationComponent {
     //  })
     //  this.router.navigateByUrl('owner/hoteldetails');
    
-   
+    // }
   
   
-  cancel(){
-  this.router.navigateByUrl('owner/hoteldetails');
-}
-
-}
+//   cancel(){
+//   this.router.navigateByUrl('owner/hoteldetails');
 
 
-  //     if(this.data){
-  //       this.commonApiCallService.updateHotel(this.data.id, this.hotelForm.value).subscribe({
-  //         next: (val:any) => {
-  //           this.toastr.success('Hotel Detail Updated Successfully !!');
-  //           this.dialog.close(true);
-  //         },
-  //         error: (err:any)=>{
-  //           this.toastr.error("some error occurred")
-  //         }
-  //       })
-  //     }else {
-  //       console.log(this.hotelForm.value)
-  //     this.commonApiCallService.registerHotel(this.hotelForm.value).subscribe({
-  //       next: (val:any) => {
-  //         this.toastr.success('Hotel Registration Successfull', "Congratulations!!");
-  //         this.dialog.close(true);
-
-  //       },
-  //       error: (err:any)=>{
-  //         this.toastr.error("some error occurred")
-  //       }
-  //     })
-  //     }
-   
-
-
-
+ 

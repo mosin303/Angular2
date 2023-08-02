@@ -31,7 +31,7 @@ export class OwnersignupComponent {
   }
   formDef() {
     this.signinform = this.fB.group({
-      id: ['',[Validators.required]],
+      userName: ['',[Validators.required]],
       name: ['', [Validators.required,Validators.minLength(5), Validators.pattern("[a-zA-Z ]*$")]],
       pan: ['',[Validators.required, Validators.pattern("^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}$")]],//ABMAS2345M
       mobNo: ['', [Validators.required,Validators.pattern("[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
@@ -43,7 +43,7 @@ export class OwnersignupComponent {
 
   submit(){
     let request = {
-      Username : this.signinform.value.id,
+      Username : this.signinform.value.userName,
       Name : this.signinform.value.name,
       Mobile : this.signinform.value.mobNo,
       Pan:this.signinform.value.pan,

@@ -1,64 +1,30 @@
  
- <div class="container">
-    <mat-toolbar >
-        <span class="example-spacer">HOTALS </span>
-        <p>WellCome To Sign Up</p>
-         <button mat-raised-button color="accent" routerLink="/home">Home</button>
-    </mat-toolbar> <br>
-    
+     
+        
+            
+<body>
+    <form class="form" [formGroup]="hotelForm" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="form-inner">
+            <h2>New Hotel</h2>
+        <div class="content">
+            <input type="text" class="input" placeholder="ownerName" formControlName="ownerName">
+            <input type="text" class="input" placeholder="ownerMobNo" formControlName="phone">
+            <input type="text" class="input" placeholder="hotelName" formControlName="name">
+             <input type="text" class="input" placeholder=" email" formControlName="email">
+            <input type="text" class="input" placeholder="hotelAddress" formControlName="address">
+            <input type="text" class="input" placeholder="discription" formControlName="discription">
+            <input type="text" class="input" placeholder="hotelMenu" formControlName="menu"> 
+            <input type="text" class="input" placeholder="roomAvailable" formControlName="arooms">
+            <button type="submit" class="btn" [disabled]="!hotelForm.valid" (click)="onSubmit()">Submit</button>
+        </div>
+        </div>
+    </form>
+    </body>
 
-<div>
-    <mat-card class="example-form">
-        <mat-card-header>
-          <h1> Sign Up </h1>
-        </mat-card-header>
-<form [formGroup]="hotelForm" (ngSubmit)="hotelRegistr()">
-    <div mat-dialog-content class="content">
-        <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Hotel name</mat-label>
-                <input matInput placeholder="Ex. Taj hotel" formControlName="name">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Hotel Mobile</mat-label>
-                <input matInput type="number" placeholder="Ex. 8857822354" formControlName="phone">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Hotel Email</mat-label>
-                <input matInput type="email" placeholder="Ex. ajay@gmail.com" formControlName="email">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Hotel Menu</mat-label>
-                <input  matInput formControlName="menu">
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <mat-form-field appearance="fill">
-                <mat-label>Hotel Discription</mat-label>
-                <textarea matInput placeholder="Ex. The Greatest Hotel Of All Time" formControlName="discription"></textarea>
-            </mat-form-field>
-            <mat-form-field appearance="fill">
-                <mat-label>Hotel Address</mat-label>
-                <textarea matInput placeholder="Ex. Chatrapati Shivaji Nagar, Pune" formControlName="address"></textarea>
-            </mat-form-field>
-        </div>
-        <div class="row">
-            <mat-form-field appearance="outline">
-                <mat-label>Available Rooms</mat-label>
-                <input matInput type="number" formControlName="arooms">
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Hotel Workers</mat-label>
-                <input matInput type="number" formControlName="workers">
-            </mat-form-field>
-        </div>
-
-    </div>
-    <div mat-dialog-actions class="action">
-        <button mat-raised-button color="primary" (click)="cancel()">Cancel</button>
-        <button mat-raised-button color="primary" (click)="hotelRegistr()">Save</button>
-    </div>
-</form>
-</mat-card>
+   
+ <!-- <a routerLink="/home">Home </a> -->
+<!-- hotelRegistr() -->

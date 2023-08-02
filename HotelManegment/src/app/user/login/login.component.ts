@@ -11,7 +11,8 @@ export class LoginComponent {
   loginform!: FormGroup;
 
   constructor (
-    private fB:FormBuilder) { }
+    private fB:FormBuilder,
+    private router:Router,) { }
 
 
   ngOnInit() {
@@ -28,6 +29,7 @@ export class LoginComponent {
 
   submit(){
     console.log(this.loginform.value);
-
+    this.router.navigateByUrl('userSuccess');
+  
 }
 }

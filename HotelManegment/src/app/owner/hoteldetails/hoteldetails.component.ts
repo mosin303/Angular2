@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { Router } from '@angular/router';
+import {  ActivatedRoute, Router } from '@angular/router';
+import { subscribeOn } from 'rxjs';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 
 @Component({
@@ -9,33 +10,84 @@ import { CommonApiCallService } from 'src/app/common/common-api-call.service';
   styleUrls: ['./hoteldetails.component.scss']
 })
 export class HoteldetailsComponent {
+
+  hotelDetails:any;
+  userName!: string;
+  userHotelDetails:any ;
+  showTable: any;
+   
   
-  fData:any;
-  formHeading : any[]= [ "Name", "Email","Menu","Discription", "Address","Rooms","Workers"];
-  hotelForm: any;
-  constructor( private fb:FormBuilder,
-    private router:Router,
-    private apidata:CommonApiCallService,){}
 
-    ngOnInit(){
-      console.log('....')
-       this.getdata();
-      
-
+    constructor(private router:Router,
+       
+      private apiCallService:CommonApiCallService){
 }
- 
+ngOnInit(): void {
+   
+  console.log('....')
+  this.getdata()
+   
+  
+}
+
+ logout(){
+    this.router.navigateByUrl('owner/ownerHome')
+  }
+
+  
 
 getdata(){
-  let urlEndPointToGetData = 'hotels';
-  this.apidata.getApiCall(urlEndPointToGetData).subscribe(data =>{
-    console.log('get data',data);
-    this.hotelForm = data
-  })
+    let urlEndPointToGetData  = 'hotel';
+    this.apiCallService.getApiCall(urlEndPointToGetData).subscribe(data =>{
+      console.log('get data',data);
+      this.userHotelDetails = data
+    })
+   }
+
+   onDeleteHotel(id: number) {
+     this.apiCallService.deleteHotel(id).subscribe({
+      next: (res) => {
+        alert('hotel deleted');
+      },
+      error: console.log,
+     });
+  }
+}
+
+    
+
   
-}
-getApi(){
-  this.router.navigateByUrl('owner/hoteldetails');
-}
+// -------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+//   fData:any;
+//   hotelForm: any;
+//   constructor( private fb:FormBuilder,
+//     private router:Router,
+//     private apidata:CommonApiCallService,){}   
+//        ngOnInit(): void {
+//         console.log('....')
+//       //  this.getdata();
+//        let urlEndPointToGetData = 'hotel';
+//         this.apidata.getData(urlEndPointToGetData).subscribe((response) => {
+//           this.hotelForm = response;
+//         });
+//       }
+// // getdata(){
+// //   let urlEndPointToGetData = 'hotels';
+// //   this.apidata.getApiCall(urlEndPointToGetData).subscribe(data =>{
+// //     console.log('get data',data);
+// //     this.hotelForm = data
+// //   }) 
+// // }
+// getApi(){
+//   this.router.navigateByUrl('owner/hoteldetails');
+// }
 // delete(){
 //   this.apidata.deletApicall('posts',4).subscribe(resp=>{
 //     console.log('delet respo',resp);
@@ -43,7 +95,4 @@ getApi(){
 //   })
 //  }
  
-  logout(){
-    this.router.navigateByUrl('owner/ownerHome')
-  }
-}
+ 

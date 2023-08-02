@@ -10,23 +10,36 @@
     flex: content;
   }
 
-  .container{
-    background-color: rgb(166, 218, 242);
-      height: 100%;
-      background-size: cover;
-      background-repeat: no-repeat;
-  }
-  .table-container{
-    position: relative;
-    top: 10px;
-    /* height: 368px;
-    width: 520px; */
    
-   
+ /* styles.css */
+ table,tr,th,td{
+  border:1px solid rgb(11, 92, 2);
+  
 }
-table,tr,td,th{
-    border: 10px solid rgb(88, 2, 76);
-    border-collapse: collapse;
-    padding: 6px 6px;
-    background-color: rgb(83, 187, 114);
+table {
+  width: 80%;
+  border-collapse: collapse;
+
+}
+
+thead {
+  background-color: #f2f2f2;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #e6f7ff;
 }

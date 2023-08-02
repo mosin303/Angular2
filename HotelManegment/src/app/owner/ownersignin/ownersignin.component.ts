@@ -119,7 +119,7 @@ updatePassword(){
         console.log(respo);
         
       })
-  }
+}
 }
 
 }

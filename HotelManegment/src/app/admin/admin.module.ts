@@ -6,13 +6,15 @@ import { AdminComponent } from './admin.component';
 import { SheradModule } from '../sherad/sherad.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
     RegistrationComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

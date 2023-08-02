@@ -21,5 +21,7 @@ login(){
 signIn(){
   this.router.navigateByUrl('owner/ownerSignIn');
 }
-
+newhotel(){
+  this.router.navigateByUrl('owner/newhotel');
+}
 }

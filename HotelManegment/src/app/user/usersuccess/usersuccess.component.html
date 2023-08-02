@@ -1,1 +1,37 @@
-<p>usersuccess works!</p>
+ 
+
+<div>
+  <a routerLink="/home">Home </a> 
+    <div class="card-container">
+       <div class="card" *ngFor="let item of hotelForm">
+        <img [src]="item.Image" alt="Card Image">  
+         <!-- <img mat-card-xl-image src='/assets/newimg/hotel-16.jpg' > -->
+         <div class="card-content">
+           <h3>HotelName :{{ item.HotelName }}</h3>
+           <p>OwnerName :{{item.OwnerName}}</p>
+           <p>OwnerMobNo :{{item.OwnerMobNo}}</p>
+           <p>HotelAddress :{{item.HotelAddress}}</p>
+           <p> HotelMenu :{{item.HotelMenu}}</p>
+           <p> RoomAvailable :{{item.RoomAvailable}}</p>
+           
+         </div>
+       </div>
+     </div>
+    
+   </div>
+
+
+<!-- <div class="card-container">
+  <div class="card" *ngFor="let item of hotelForm">
+     <img [src]="item.Image" alt="Card Image">
+    <img mat-card-xl-image src='/assets/newimg/hotel-16.jpg'>
+    <div>
+      <p>HotelName :{{ item.HotelName }}</p>
+      <p>OwnerName :{{item.OwnerName}}</p>
+      <p>OwnerMobNo :{{item.OwnerMobNo}}</p>
+      <p>HotelAddress :{{item.HotelAddress}}</p>
+      <p> HotelMenu :{{item.HotelMenu}}</p>
+      <p> RoomAvailable :{{item.RoomAvailable}}</p>
+    </div>
+  </div>
+</div> -->

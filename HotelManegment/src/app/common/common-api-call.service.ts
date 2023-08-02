@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,10 @@ export class CommonApiCallService {
 let url = this.url + endPoint;
 return this.http.post(url,formdata);
   }
+  postApiCall(endPoint: string, formData: any) {
+    let url = this.url + endPoint;
+    return this.http.post(url, formData);
+  }
 
   getApiCall(endPoint:string){
     let url = this.url + endPoint ;
@@ -27,5 +32,17 @@ return this.http.post(url,formdata);
     let url = this.url + endPoint + '/' + id;
     return this.http.patch(url,data) 
   }
+
+  getData(endPoint:string){
+    let url = this.url + endPoint ;
+    return this.http.get(url);
+}
+
+ 
+
+deleteHotel(id: number):Observable<any>{
+  let url = this.url + 'hotel'+'/'+ id;
+  return this.http.delete(url);
+}
 
 }

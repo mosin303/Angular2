@@ -1,0 +1,27 @@
+ 
+
+<body>
+<form class="form" [formGroup]="hotelForm" >
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="form-inner">
+        <a routerLink="/owner/hoteldetails">Home </a> 
+        <h2>New Hotel</h2>        
+    <div class="content">
+        <input type="text" class="input" placeholder="ownerName" formControlName="ownerName">
+        <input type="text" class="input" placeholder="ownerMobNo" formControlName="ownerMobNo">
+        <input type="text" class="input" placeholder="hotelName" formControlName="hotelName">
+        <input type="text" class="input" placeholder="hotelAddress" formControlName="hotelAddress">
+        <input type="text" class="input" placeholder="hotelMobile" formControlName="hotelMobile">
+        <input type="text" class="input" placeholder="hotelMenu" formControlName="hotelMenu"> 
+        <input type="text" class="input" placeholder="roomAvailable" formControlName="roomAvailable">
+        <input type="text" class="input" placeholder="imageUrl" formControlName="image">
+        <button type="submit" class="btn" [disabled]="!hotelForm.valid" (click)="onSubmit()">Submit</button>
+    </div>
+    </div>
+</form>
+</body>
+ 
+ 
