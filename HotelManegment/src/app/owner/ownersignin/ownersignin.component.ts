@@ -59,7 +59,7 @@ export class OwnersigninComponent {
       this.isValidUser();
       if (this.validUser) {
         this.toaster.success(`login`,`Successful`) 
-        this.router.navigateByUrl('owner/hoteldetails');
+        this.router.navigateByUrl('owner/ownerSuccess');
       }
       else {
         this.toaster.error(`"Please check the password", 'Wrong Password' `)

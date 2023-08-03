@@ -180,17 +180,6 @@
       "id": 4
     },
     {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "987458697458",
-      "HotelName": "taj hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "585874855",
-      "HotelMenu": "veg",
-      "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-3.jpg",
-      "id": 7
-    },
-    {
       "OwnerName": "salman",
       "OwnerMobNo": "7896541236",
       "HotelName": "hotel  five star",
@@ -332,6 +321,39 @@
       "RoomAvailable": "50",
       "Image": "/assets/image/hotel-8.jpg",
       "id": 20
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "7898548574",
+      "HotelName": "sahi Hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "08888696921",
+      "HotelMenu": "NONveg",
+      "RoomAvailable": "500",
+      "Image": "/assets/image/hotel-8.jpg",
+      "id": 21
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "7898548574",
+      "HotelName": "sahi Hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "08888696921",
+      "HotelMenu": "NONveg",
+      "RoomAvailable": "500",
+      "Image": "/assets/image/hotel-8.jpg",
+      "id": 22
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "7898548574",
+      "HotelName": "sahi Hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "08888696921",
+      "HotelMenu": "veg",
+      "RoomAvailable": "50",
+      "Image": "/assets/image/hotel-8.jpg",
+      "id": 23
     }
   ],
   "hotels": [

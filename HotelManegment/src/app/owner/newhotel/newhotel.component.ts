@@ -14,6 +14,7 @@ export class NewhotelComponent {
   endpoint!:string;
   postResponse:any;
   journey!: string;
+  getDataById: any;
 
   constructor(private fb: FormBuilder,
     private router:Router,
@@ -25,6 +26,9 @@ export class NewhotelComponent {
   }
 
   ngOnInit() {
+    this.getDataById = this.apiCallService.getDataById;
+      this.journey = this.apiCallService.journey;
+      console.log( this.getDataById );
     this.endpoint = 'hotel';
     if(this.journey!= 'update')
     console.log(this.endpoint);     
@@ -33,14 +37,14 @@ export class NewhotelComponent {
   }
   formdata(){
   this.hotelForm = this.fb.group({
-    ownerName: ['', Validators.required],
-    ownerMobNo: ['', Validators.required],
-    hotelName: ['', Validators.required],
-    hotelAddress: ['', Validators.required],
-    hotelMobile: ['', Validators.required],
-    hotelMenu: ['', Validators.required],
-    roomAvailable: ['', Validators.required ],
-    image: [""],
+    ownerName: [this.getDataById?.OwnerName ? this.getDataById.OwnerName :'', Validators.required],
+    ownerMobNo: [this.getDataById?.OwnerMobNo ? this.getDataById.OwnerMobNo :'', Validators.required],
+    hotelName: [this.getDataById?.HotelName ? this.getDataById.HotelName :'', Validators.required],
+    hotelAddress: [this.getDataById?.HotelAddress ? this.getDataById.HotelAddress :'', Validators.required],
+    hotelMobile: [this.getDataById?.HotelMobile ? this.getDataById.HotelMobile :'', Validators.required],
+    hotelMenu: [this.getDataById?.HotelMenu ? this.getDataById.HotelMenu :'', Validators.required],
+    roomAvailable: [this.getDataById?.RoomAvailable ? this.getDataById.RoomAvailable :'', Validators.required ],
+    image: [this.getDataById?.Image ? this.getDataById.Image :""],
   });
 }
 
@@ -66,13 +70,10 @@ this.apiCallService.postApiCall(endpoint,request).subscribe((resp:any)=>{
 })
      this.toaster.success('Hotel Registration Successfull', "Congratulations!!")
     
-       this.router.navigateByUrl('owner/hoteldetails');
+       this.router.navigateByUrl('owner/ownerSuccess');
+} 
 
 
-}
-
- 
- 
 }
 
  
