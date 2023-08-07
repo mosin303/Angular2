@@ -114,28 +114,6 @@
   ],
   "hotel": [
     {
-      "OwnerName": "tanvir",
-      "OwnerMobNo": "785965865",
-      "HotelName": "Five Star Hotel",
-      "HotelAddress": "pune",
-      "HotelMobile": "785656",
-      "HotelMenu": "veg",
-      "RoomAvailable": "80",
-      "Image": "/assets/image/hotel-5.jpg",
-      "id": 1
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "987458697458",
-      "HotelName": "taj hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "585874855",
-      "HotelMenu": "veg",
-      "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-3.jpg",
-      "id": 2
-    },
-    {
       "OwnerName": "salman",
       "OwnerMobNo": "7896541236",
       "HotelName": "hotel  five star",
@@ -156,17 +134,6 @@
       "RoomAvailable": "60",
       "Image": "/assets/image/hotel-10.jpg",
       "id": 5
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "7898548574",
-      "HotelName": "sahi Hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "50",
-      "Image": "/assets/image/hotel-8.jpg",
-      "id": 6
     },
     {
       "OwnerName": "tanvir",
@@ -202,17 +169,6 @@
       "id": 9
     },
     {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "7898548574",
-      "HotelName": "sahi Hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "50",
-      "Image": "/assets/image/hotel-8.jpg",
-      "id": 10
-    },
-    {
       "OwnerName": "tanvir",
       "OwnerMobNo": "785965865",
       "HotelName": "Five Star Hotel",
@@ -222,17 +178,6 @@
       "RoomAvailable": "80",
       "Image": "/assets/image/hotel-5.jpg",
       "id": 11
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "987458697458",
-      "HotelName": "taj hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "585874855",
-      "HotelMenu": "veg",
-      "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-3.jpg",
-      "id": 12
     },
     {
       "OwnerName": "salman",
@@ -257,17 +202,6 @@
       "id": 15
     },
     {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "7898548574",
-      "HotelName": "sahi Hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "50",
-      "Image": "/assets/image/hotel-8.jpg",
-      "id": 16
-    },
-    {
       "OwnerName": "tanvir",
       "OwnerMobNo": "785965865",
       "HotelName": "Five Star Hotel",
@@ -277,17 +211,6 @@
       "RoomAvailable": "80",
       "Image": "/assets/image/hotel-5.jpg",
       "id": 14
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "987458697458",
-      "HotelName": "taj hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "585874855",
-      "HotelMenu": "veg",
-      "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-3.jpg",
-      "id": 17
     },
     {
       "OwnerName": "salman",
@@ -317,31 +240,9 @@
       "HotelName": "sahi Hotel",
       "HotelAddress": "umadi",
       "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "50",
-      "Image": "/assets/image/hotel-8.jpg",
-      "id": 20
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "7898548574",
-      "HotelName": "sahi Hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "NONveg",
+      "HotelMenu": "non veg",
       "RoomAvailable": "500",
-      "Image": "/assets/image/hotel-8.jpg",
-      "id": 21
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "7898548574",
-      "HotelName": "sahi Hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "NONveg",
-      "RoomAvailable": "500",
-      "Image": "/assets/image/hotel-8.jpg",
+      "Image": "/assets/image/hotel-13.jpg",
       "id": 22
     },
     {
@@ -354,84 +255,155 @@
       "RoomAvailable": "50",
       "Image": "/assets/image/hotel-8.jpg",
       "id": 23
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "987458697458",
+      "HotelName": "taj hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "585874855",
+      "HotelMenu": "veg",
+      "RoomAvailable": "58",
+      "Image": "/assets/image/hotel-11.jpg",
+      "id": 24
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "987458697458",
+      "HotelName": "taj hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "585874855",
+      "HotelMenu": "veg",
+      "RoomAvailable": "58",
+      "Image": "/assets/image/hotel-11.jpg",
+      "id": 27
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "7898548574",
+      "HotelName": "sahi Hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "08888696921",
+      "HotelMenu": " non veg",
+      "RoomAvailable": "500",
+      "Image": "/assets/image/hotel-8.jpg",
+      "id": 28
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "7898548574",
+      "HotelName": "sahi Hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "08888696921",
+      "HotelMenu": "NONveg",
+      "RoomAvailable": "500",
+      "Image": "/assets/image/hotel-8.jpg",
+      "id": 29
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "7898548574",
+      "HotelName": "sahi Hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "08888696921",
+      "HotelMenu": "veg",
+      "RoomAvailable": "50",
+      "Image": "/assets/image/hotel-8.jpg",
+      "id": 30
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "987458697458",
+      "HotelName": "taj hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "585874855",
+      "HotelMenu": "veg",
+      "RoomAvailable": "58",
+      "Image": "/assets/image/hotel-11.jpg",
+      "id": 31
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "987458697458",
+      "HotelName": "Hotel Lotus",
+      "HotelAddress": "umadi",
+      "HotelMobile": "585874855",
+      "HotelMenu": "veg",
+      "RoomAvailable": "58",
+      "Image": "/assets/image/hotel-11.jpg",
+      "id": 32
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "987458697458",
+      "HotelName": "Five Star Hotel",
+      "HotelAddress": "umadi",
+      "HotelMobile": "585874855",
+      "HotelMenu": "veg",
+      "RoomAvailable": "58",
+      "Image": "/assets/image/hotel-11.jpg",
+      "id": 33
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": "987458697458",
+      "HotelName": "Green Valey",
+      "HotelAddress": "umadi",
+      "HotelMobile": "585874855",
+      "HotelMenu": "veg",
+      "RoomAvailable": "58",
+      "Image": "/assets/image/hotel-11.jpg",
+      "id": 34
     }
   ],
-  "hotels": [
+  "hotelBooking": [
     {
-      "name": "Green Valey",
-      "ownerName": "mosin",
-      "phone": 8888696921,
-      "email": "Green@gmail.com",
-      "menu": "Manchurian",
-      "discription": "The Best manchurian in the world",
-      "address": "Nehru Chauk , Amaravati - 421212",
-      "arooms": 300,
+      "UserName": "mosin",
+      "AdharNo": "478596324152",
+      "Mobile": "4567896547",
+      "Amount": "100",
       "id": 1
     },
     {
-      "name": "Five Star Hotel",
-      "ownerName": "mosin",
-      "phone": 8888981212,
-      "email": "star@gmail.com",
-      "menu": "Coffee",
-      "discription": "The Best Coffee you will ever have !!",
-      "address": "Chatrapati Shivaji Nagar, Pune - 431213",
-      "arooms": 25,
+      "UserName": "mosin",
+      "AdharNo": "123456789654",
+      "Mobile": "1235647896",
+      "Amount": 120,
       "id": 2
     },
     {
-      "name": "Hotel Lotus",
-      "ownerName": "mosin",
-      "phone": 7499269640,
-      "email": "Tanaya@gmail.com",
-      "menu": "Chat",
-      "discription": "The best Chat in the whole universe !!",
-      "address": "pundalik baba nagar, \nAmaravati - 444604",
-      "arooms": 200,
+      "UserName": "salman",
+      "AdharNo": "45869689554",
+      "Mobile": "2515666965",
+      "Amount": 210,
       "id": 3
     },
     {
-      "name": "Taj Hotel",
-      "ownerName": "mosin",
-      "phone": 9421322354,
-      "email": "Taj@gmail.com",
-      "menu": "Dal Tadka",
-      "discription": "The greatest hotel of all time",
-      "address": "Chatrapti sambhaji maharaj - 431213",
-      "arooms": 300,
+      "UserName": "tanveer",
+      "AdharNo": "89659659958665",
+      "Mobile": "25642363563",
+      "Amount": 25,
       "id": 4
     },
     {
-      "name": "Green Valey",
-      "ownerName": "mosin",
-      "phone": 8888696921,
-      "email": "Green@gmail.com",
-      "menu": "Manchurian",
-      "discription": "The Best manchurian in the world",
-      "address": "Nehru Chauk , Amaravati - 421212",
-      "arooms": 300,
-      "id": 1
+      "UserName": "irfan",
+      "AdharNo": "45879356569889",
+      "Mobile": "4587696855",
+      "Amount": 410,
+      "id": 5
     },
     {
-      "name": "Minar Hotel",
-      "ownerName": "mosin",
-      "phone": "8549895",
-      "email": "minarhotel@gmail.com",
-      "menu": "non veag",
-      "discription": "use full hotel",
-      "address": "Mina Rood  ,Minar Hotel, mumbai",
-      "arooms": 101,
+      "UserName": "mosin",
+      "AdharNo": "858496123253",
+      "Mobile": "2524351553",
+      "Amount": 1425,
       "id": 6
     },
     {
-      "name": "dassf",
-      "ownerName": "mosin",
-      "phone": "8549895",
-      "email": "mosinmulla553@gmail",
-      "menu": "dFFFCD",
-      "discription": "dfF",
-      "address": "Mina Rood  ,Minar Hotel, mumbai",
-      "arooms": "20",
+      "UserName": "mosin",
+      "AdharNo": "856966656666",
+      "Mobile": "5488796565",
+      "Amount": 400,
       "id": 7
     }
   ]

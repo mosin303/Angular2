@@ -1,9 +1,21 @@
-<p>ownersuccess works!</p> 
+<div class="container">
+  <mat-toolbar>
+      <span class="example-spacer">MY HOTALS </span>
+       
+      <!-- <button mat-raised-button color="accent" routerLink="/home">Home</button> -->
+     
+  
+<button mat-raised-button color="accent" routerLink="/home">Home</button>
+<!-- <button mat-raised-button color="accent" routerLink="/owner/hoteldetails">hoteldetails</button> -->
 <button mat-raised-button color="accent" (click)="hotelRegistration()">New Hotel registration</button>
 <button mat-raised-button color="accent" (click)="myHotelDetails()">My Hotel Details</button>
-
+ </mat-toolbar> <br>
 
 <div  *ngIf="showTable">
+  <mat-form-field class="example-full-width">
+  <mat-label>Search here</mat-label>
+  <input matInput type="text" [(ngModel)]="searchBoxVal">
+</mat-form-field>
 <table *ngIf="userHotelDetails.length > 0 && showTable">
     <tr>
         <th>Owner Name</th>
@@ -15,7 +27,8 @@
         <th>Delete</th>
         <th>Edit</th>
     </tr>
-    <tr *ngFor="let hotelData of userHotelDetails">
+    <!-- filtar : searchBoxVal" -->
+    <tr *ngFor="let hotelData of userHotelDetails | filtar : searchBoxVal"> 
        <td>{{hotelData.OwnerName}}</td>
        <td> {{hotelData.HotelMobile}}</td>
        <td>{{hotelData.HotelName}}</td>

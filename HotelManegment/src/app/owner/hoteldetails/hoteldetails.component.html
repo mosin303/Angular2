@@ -12,6 +12,11 @@
 
   <!-- <div  *ngIf="showTable"> -->
     <!-- <table  *ngIf="userHotelDetails.length > 0 && showTable" > -->
+      <mat-form-field class="example-full-width">
+        <mat-label>Search here</mat-label>
+        <input matInput type="text" [(ngModel)]="searchBoxVal">
+      </mat-form-field>
+      
       <table>
         <tr>
             <th>Owner Name</th>
@@ -21,9 +26,10 @@
             <th>Hotel Contact</th>
             <th>Hotel Menu</th>
             <th>Delete</th>
-            <th>Edit</th>
+            <!-- <th>Edit</th> -->
         </tr>
-        <tr *ngFor="let hotelData of userHotelDetails">
+        <tr *ngFor="let hotelData of userHotelDetails | filtar : searchBoxVal ">
+          <!-- | filtar : searchBoxVal -->
            <td>{{hotelData.OwnerName}}</td>
            <td> {{hotelData.HotelMobile}}</td>
            <td>{{hotelData.HotelName}}</td>
@@ -31,77 +37,10 @@
            <td>{{hotelData.OwnerMobNo}}</td>
            <td>{{hotelData.HotelMenu}}</td>
            <td><mat-icon (click)="onDeleteHotel(hotelData.id)">delete</mat-icon></td>
-           <td><mat-icon >mode_edit</mat-icon></td>
+           <!-- <td><mat-icon >mode_edit</mat-icon></td> -->
         </tr>
       </table>
     <!-- </table> -->
     <!-- </div> -->
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- formHeading : any[]= [ "Name", "Email","Menu","Discription", "Address","Rooms","Workers"]; -->
-  <!-- <div *ngIf="hotelForm" class="table-container">
-    <table>
-      <tr>
-        <th *ngFor="let heading of formHeading"> {{heading}} </th>
-      <tr *ngFor="let formData of hotelForm">
-        <td>{{formData.name}}</td>
-        <td>{{formData.ownerName}}</td>
-        <td>{{formData.phone}}</td>
-        <td>{{formData.email}}</td>
-        <td>{{formData.menu}}</td>
-        <td>{{formData.discription}}</td>
-        <td>{{formData.address}}</td>
-        <td>{{formData.arooms}}</td>
-        
-      </tr>
-    </table>
-  </div> -->
-  <!-- <th *ngFor ="let heading of tableHeading">{{heading}}</th>
-       </tr> 
-       <tr *ngFor ="let tableData of formData"> 
-        <td>{{tableData.id}}</td> -->
-  <!-- ------------------------------------------------------- -->
-
-  <!-- card.component.html -->
-
-  <!-- <div class="card-container">
-    <div class="card" *ngFor="let item of hotelForm">
-      <img [src]="item.imageUrl" alt="Card Image">
-      <div class="card-content">
-        <h3>{{ item.name }}</h3>
-        <p>{{item.email}}</p>
-        <p>{{item.menu}}</p>
-        <p>{{item.discription}}</p>
-        <p>{{item.address}}</p>
-        <p>{{item.arooms}}</p>
-        <p>{{item.workers}}</p>
-      </div>
-    </div>
-  </div> -->

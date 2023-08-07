@@ -10,6 +10,7 @@ import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 export class UsersuccessComponent {
   hotelForm!: any;
   data:any;
+  showTable: any;
 
    
 
@@ -27,19 +28,9 @@ export class UsersuccessComponent {
       });
     }
 
- // hotelRegistr(){
-    //  let urlEndPointToGetData = 'hotels';
-    //  this.apiCallService.getApiCall(urlEndPointToGetData).subscribe(data =>{
-    //    console.log('get data',data);
-    //    this.formData = data
-    //  })
-    //  this.router.navigateByUrl('owner/hoteldetails');
-
-
- 
- 
-
 logout(){
   this.router.navigateByUrl('home')
 }
+
+ 
 }

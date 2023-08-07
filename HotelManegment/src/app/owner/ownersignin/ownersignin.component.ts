@@ -16,9 +16,10 @@ export class OwnersigninComponent {
   ownerData : any;
   validUser: boolean = false;
   forgetPasswordForm!:FormGroup;
+  forgotPassword: boolean = false;
   showForgetPasswordForm: boolean = false;
-  // forgetPasswordForm!:FormGroup;
-  // showForgetPasswordForm: boolean = false;
+  userName!: string;
+   
   constructor (private router:Router,
     private fB:FormBuilder,
     private commonApiCallService:CommonApiCallService,
@@ -26,12 +27,12 @@ export class OwnersigninComponent {
     private toaster:ToastrService) { }
 
 
-  ngOnInit() {
-     this.formDef();
-     
+  ngOnInit() {  
     this.journey = this.commonService.journey;
+    this.forgotPassword = this.commonService.forgotPassword;
     console.log('this.journey',this.journey);
     this.getOwnerApiData()
+    this.formDef();
   }
   formDef() {
     this.loginform = this.fB.group({
@@ -92,34 +93,36 @@ forgetPassword(){
   this.forgoPasswordFormDetails();
 }
 
-submit(){
-  if(this.ownerData ){
-    this.updatePassword();
-   }
-   else{
-     this.getOwnerApiData();
-     this.updatePassword();
-   }
-   this.showForgetPasswordForm = !this.showForgetPasswordForm;
+submit() {
+  this.updatePassword();
+  this.showForgetPasswordForm = !this.showForgetPasswordForm;
+  this.forgotPassword = false;
 }
-updatePassword(){
-  var user:any;
-  this.ownerData?.forEach((data:any)=>{
-    if(data.UserName ===  this. loginform.value.userName){
+
+async updatePassword() {
+  var user: any;
+  this.ownerData.forEach((data: any) => {
+    if (data.UserName === this.userName) {
       user = data;
     }
-    console.log('user',user);
-    
-  }) 
-  if(user){
+  })
+  if (user) {
     let request = {
-      Password : this.forgetPasswordForm.value.newPassword
+      Password: this.forgetPasswordForm.value.newPassword
     }
-      this.commonApiCallService.patchApiCall(this.journey,request,user.id ).subscribe((respo:any)=>{
-        console.log(respo);
-        
-      })
+    // this.commonApiCallService.patchApiCall(this.endPoint,request,user.id ).subscribe((respo:any)=>{
+    //   console.log(respo);
+    // })
+    await this.commonApiCallService.patchApiCall(this.journey, request, user.id).toPromise()
+ 
+  }
+  else{
+    alert('user is not exist')
+  }
 }
 }
 
-}
+ // this.commonApiCallService.patchApiCall(this.journey,request,user.id ).subscribe((respo:any)=>{
+      //   console.log(respo);
+        
+      // })

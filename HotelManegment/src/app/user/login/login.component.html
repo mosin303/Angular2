@@ -1,12 +1,30 @@
-<div class="container">
+ 
 <mat-toolbar color="primary">
     <span class="example-spacer">MY HOTALS </span>
     <p>WellCome To Login</p>
      <button mat-raised-button color="accent" routerLink="/home">Home</button>
-</mat-toolbar> <br>
-
-<div>
-<mat-card class="example-form">
+</mat-toolbar> 
+<body> 
+  <form class="form" [formGroup]="loginform">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="form-inner">
+           
+          <h2>Login</h2>        
+      <div class="content">
+          <input type="text" class="input" placeholder="Username" formControlName="username">
+          <input type="text" class="input" placeholder="Password" formControlName="password">
+         
+          <button type="submit" class="btn" [disabled]="!loginform.valid" (click)="submit()">Submit</button><br><br>
+          <a   type="submit" class="btn-sign" routerLink="/signin" > New Signin</a> 
+      </div>
+      </div>
+  </form>
+  </body>
+<!-- <div> -->
+<!-- <mat-card class="example-form">
     <mat-card-header>
         <h1>Login</h1>
     </mat-card-header>
@@ -31,5 +49,12 @@
           
     </mat-card-content>
   </mat-card>
-</div>
-</div>
+</div> -->
+ 
+
+
+ 
+
+  
+    
+   

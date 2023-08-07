@@ -1,54 +1,56 @@
-<div class="container">
+
+ 
   <mat-toolbar color="primary">
     <span class="example-spacer">MY HOTALS </span>
     <p>WellCome To login</p>
     <button mat-raised-button color="accent" routerLink="/home">Home</button>
-  </mat-toolbar> <br>
+  </mat-toolbar> 
+ 
+<body> 
+    
+  <form class="form" [formGroup]="loginform"  *ngIf="!showForgetPasswordForm">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="form-inner">
+          
+          
+          <h2>Login</h2>        
+      <div class="content">
+          <input type="text" class="input" placeholder="UserName" formControlName="userName">
+          <input type="text" class="input" placeholder="Password" formControlName="password">
+           
+          
+          <button   class="btn" [disabled]="!loginform.valid" (click)="login()">Submit</button><br><br>
+          <a class="btn-sign"  (click)="signUp()">New SignUp </a>  
+           <a class="btn-sign" (click)="forgetPassword()"> ! Forget Passeword</a>  
+             <br>
+             <a class="btn-sign" routerLink="/owner/hoteldetails">Home </a> 
+      </div>
+      </div>
+  </form>
 
-  <div>
-    <mat-card class="example-form">
-       
-      <mat-card-header>
-        <h1>Login</h1>
-      </mat-card-header>
-      <mat-card-content>
-        <form [formGroup]="loginform" *ngIf="!showForgetPasswordForm">
-          <mat-form-field class="example-full-width">
-            <mat-label>User Name</mat-label>
-            <input matInput formControlName="userName">
-          </mat-form-field>
+  <!-- ------------------------------------------------------------------------------- -->
 
-          <mat-form-field class="example-full-width">
-            <mat-label>Password</mat-label>
-            <input matInput formControlName="password">
-          </mat-form-field>
-
-          <div class="example-button-row">
-
-            <button mat-button class="sumit-btn" [disabled]="!loginform.valid" (click)="login()">Submit</button>&nbsp;
-            <button mat-button class="login-btn" (click)="signUp()">New SignUp-Btn</button>
-            <button mat-raised-button color="primary" (click)="forgetPassword()">Forget Passeword</button>
-          </div>
-        </form>
-      </mat-card-content>
-    </mat-card>
-   </div> 
-  
-   <div class="container"> 
-  <form class="example-form" [formGroup]="forgetPasswordForm" *ngIf="showForgetPasswordForm">
-
-    <mat-form-field class="example-full-width">
-        <mat-label>New Password</mat-label>
-        <input matInput formControlName="newPassword">
-    </mat-form-field>
-    <br>
-    <mat-form-field class="example-full-width">
-        <mat-label>Confirm Password</mat-label>
-        <input matInput type="password" formControlName="confirmPassword">
-    </mat-form-field>
-
-    <div>
-        <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+  <form class="form" [formGroup]="forgetPasswordForm" *ngIf="showForgetPasswordForm">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="form-inner">
+        <a routerLink="/owner/ownerSignIn">Home </a> 
+        <h2>Forget Passeword</h2>        
+    <div class="content">
+        <input type="text" class="input" placeholder="newPassword" formControlName="newPassword">
+        <input type="text" class="input" placeholder="Password" formControlName="confirmPassword">
+         <button   class="btn"  (click)="submit()">Submit</button>
+         
+    </div>
     </div>
 </form>
- </div>
+  </body>
+    
+    
+
+  

@@ -1,7 +1,7 @@
  
 
 <body>
-<form class="form" [formGroup]="hotelForm" >
+<form class="form" [formGroup]="hotelForm">
     <span></span>
     <span></span>
     <span></span>
@@ -18,7 +18,8 @@
         <input type="text" class="input" placeholder="hotelMenu" formControlName="hotelMenu"> 
         <input type="text" class="input" placeholder="roomAvailable" formControlName="roomAvailable">
         <input type="text" class="input" placeholder="imageUrl" formControlName="image">
-        <button type="submit" class="btn" [disabled]="!hotelForm.valid" (click)="onSubmit()">Submit</button>
+        
+        <button type="submit" class="btn"  [disabled]="!hotelForm.valid" (click)="onSubmit()">{{this. editId ? 'Update':'Submit'}}</button>
     </div>
     </div>
 </form>

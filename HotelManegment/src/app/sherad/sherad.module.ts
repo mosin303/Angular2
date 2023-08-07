@@ -13,6 +13,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
+ 
+ 
+
 
 
 @NgModule({
@@ -35,10 +38,10 @@ import {MatMenuModule} from '@angular/material/menu';
       ToastrModule,
       MatGridListModule,
       MatMenuModule,
-
-
+       
   ],
   exports:[
+    
     FormsModule,
     ReactiveFormsModule,
     MatToolbarModule,
@@ -55,6 +58,7 @@ import {MatMenuModule} from '@angular/material/menu';
       ToastrModule,
       MatGridListModule,
       MatMenuModule,
+       
   ]
 })
 export class SheradModule { }

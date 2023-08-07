@@ -15,6 +15,8 @@ export class OwnersuccessComponent {
   userHotelDetails: any[] = []
   showTable: any;
   data: any;
+  dataById: any;
+  searchBoxVal:any;
 
   constructor(private router: Router, private commonApiCallService: CommonApiCallService,
     private commonService: CommonService, private toastr: ToastrService) { }
@@ -26,7 +28,7 @@ export class OwnersuccessComponent {
   }
 
   hotelRegistration() {
-    this.router.navigateByUrl('owner/ownrhotelristation')
+    this.router.navigateByUrl('owner/newhotel')
   }
 
   async myHotelDetails() {
@@ -34,7 +36,7 @@ export class OwnersuccessComponent {
     let endPoint = 'hotel';
 
     this.hotelDetails = await this.commonApiCallService.getApiCall(endPoint).toPromise()
-    console.log('hotelDetails', this.hotelDetails);
+    console.log('hotel', this.hotelDetails);
     this.userHotelDetails = []
     if (this.hotelDetails) {
       this.hotelDetailsByOwner();
@@ -66,19 +68,16 @@ export class OwnersuccessComponent {
     this.myHotelDetails();
   }
 
-  edit(id: number) { 
-    this.commonApiCallService.journey = "update"
-     this.commonApiCallService.editApiCall('hotel', id).subscribe(response=>{
-      this.data= response;
-  });
+  async edit(id: number) { 
+    this.commonService .id= id;
+    this.dataById = await this.commonApiCallService.editApiCall('hotel', id).toPromise();
+    this.commonService.dataById = this.dataById;
+       this.router.navigateByUrl('owner/newhotel')
+  } 
 
-  if(this.data) {
-    this.commonApiCallService.getDataById = this.data
-    this.router.navigateByUrl('owner/newhotel')
-  }
+  
+}
 
-}
-}
 
 // updateDetails(){this.ApidataSevice.journey = "update"
 // this.ApidataSevice.getApiCall('posts','1').subscribe(response=>{

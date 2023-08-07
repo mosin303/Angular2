@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,13 @@ import { Injectable } from '@angular/core';
 export class CommonService {
   journey!:string;
   userName! :string;
-  constructor() { }
+  forgotPassword!:boolean;
+  id!:any;
+  dataById: any;
+  constructor(private toastrService :ToastrService) { }
+
+  warningToaster( msg:any, title:any, configuration:any ){
+    this.toastrService.warning( msg, title, configuration)
+}
 }
 

@@ -35,7 +35,7 @@ export class OwnerhotelregistrationComponent {
   ngOnInit(){ 
     
     this.endpoint = 'hotels';
-    if(this.journey != 'update')
+    
     console.log(this.endpoint);     
     this.formdata()
   }
@@ -86,19 +86,9 @@ onSubmit(){
     }
     }
     
-    // hotelRegistr(){
-    //  let urlEndPointToGetData = 'hotels';
-    //  this.apiCallService.getApiCall(urlEndPointToGetData).subscribe(data =>{
-    //    console.log('get data',data);
-    //    this.formData = data
-    //  })
-    //  this.router.navigateByUrl('owner/hoteldetails');
-   
-    // }
+    
   
   
-//   cancel(){
-//   this.router.navigateByUrl('owner/hoteldetails');
-
+ 
 
  

@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import {  ActivatedRoute, Router } from '@angular/router';
-import { subscribeOn } from 'rxjs';
+import { Router } from '@angular/router';
+ 
+ 
+ 
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
+import { CommonService } from 'src/app/common/common.service';
 
 @Component({
   selector: 'app-hoteldetails',
@@ -15,11 +17,13 @@ export class HoteldetailsComponent {
   userName!: string;
   userHotelDetails:any ;
   showTable: any;
-   
+  data:any;
+  dataById: any;
+  searchBoxVal:any;
   
 
     constructor(private router:Router,
-       
+       private commonService:CommonService,
       private apiCallService:CommonApiCallService){
 }
 ngOnInit(): void {
@@ -52,47 +56,16 @@ getdata(){
       error: console.log,
      });
   }
+  async edit(id: number) { 
+    this.commonService .id= id;
+    this.dataById = await this.apiCallService.editApiCall('hotel', id).toPromise();
+    this.commonService.dataById = this.dataById;
+       this.router.navigateByUrl('owner/newhotel')
+  } 
+
 }
 
     
 
   
 // -------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-//   fData:any;
-//   hotelForm: any;
-//   constructor( private fb:FormBuilder,
-//     private router:Router,
-//     private apidata:CommonApiCallService,){}   
-//        ngOnInit(): void {
-//         console.log('....')
-//       //  this.getdata();
-//        let urlEndPointToGetData = 'hotel';
-//         this.apidata.getData(urlEndPointToGetData).subscribe((response) => {
-//           this.hotelForm = response;
-//         });
-//       }
-// // getdata(){
-// //   let urlEndPointToGetData = 'hotels';
-// //   this.apidata.getApiCall(urlEndPointToGetData).subscribe(data =>{
-// //     console.log('get data',data);
-// //     this.hotelForm = data
-// //   }) 
-// // }
-// getApi(){
-//   this.router.navigateByUrl('owner/hoteldetails');
-// }
-// delete(){
-//   this.apidata.deletApicall('posts',4).subscribe(resp=>{
-//     console.log('delet respo',resp);
-    
-//   })
-//  }
- 
- 

@@ -8,7 +8,10 @@ import { Observable } from 'rxjs';
 export class CommonApiCallService {
   journey!:string;
   url = ' http://localhost:3000/' ;
-  getDataById: any;
+  
+   
+ 
+ 
   
   constructor(private http: HttpClient) { }
 
@@ -48,11 +51,11 @@ let url = this.url + endPoint + '/' + id;
 return this.http.delete(url) 
 }
 editApiCall(endpoint:any , id? : any){
-  let url = id ? this.url + endpoint + '/' + id : this.url + endpoint ;
+  let url = id? this.url + endpoint + '/' + id : this.url + endpoint ;
   return this.http .get(url);
 }
 
-putApiCall(endPoint: string, formData: any, id: any): Observable<any> {
+putApiCall(endPoint: string, formData: any, id: any){
   let url = this.url + endPoint + '/' + id;
   return this.http.put(url, formData);
 }
