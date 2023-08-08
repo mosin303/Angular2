@@ -12,9 +12,8 @@ import { LoginComponent } from './user/login/login.component';
 import { SigninComponent } from './user/signin/signin.component';
 import { UsersuccessComponent } from './user/usersuccess/usersuccess.component';
 import { ToastrModule } from 'ngx-toastr';
-import { FiltarPipe } from './common/filtar.pipe';
-import { BooknowComponent } from './user/booknow/booknow.component';
  
+import { BooknowComponent } from './user/booknow/booknow.component';
  
  
  
@@ -22,14 +21,14 @@ import { BooknowComponent } from './user/booknow/booknow.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    
+    HomeComponent, 
     UserComponent,
     LoginComponent,
     SigninComponent,
     UsersuccessComponent,
-    FiltarPipe,
+     
     BooknowComponent,
+        
      
      
 

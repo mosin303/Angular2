@@ -13,13 +13,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
- 
+import {MatDialogModule} from '@angular/material/dialog';
+import { FiltarPipe } from '../common/filtar.pipe';
+
  
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    FiltarPipe
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -38,7 +42,7 @@ import {MatMenuModule} from '@angular/material/menu';
       ToastrModule,
       MatGridListModule,
       MatMenuModule,
-       
+      MatDialogModule,
   ],
   exports:[
     
@@ -58,7 +62,8 @@ import {MatMenuModule} from '@angular/material/menu';
       ToastrModule,
       MatGridListModule,
       MatMenuModule,
-       
+      MatDialogModule,
+      FiltarPipe
   ]
 })
 export class SheradModule { }

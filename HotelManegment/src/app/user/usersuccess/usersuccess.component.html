@@ -4,15 +4,19 @@
     <p>WellCome To Hotel</p>
     <button mat-raised-button color="accent" routerLink="/home">logout</button> 
     <button mat-raised-button color="accent" routerLink="/booknow">Booknow</button> 
-   <button (click)="bookNow()"> Booknow </button>
+    <button class="btn-sign"  (click)="booknow()">Booknow</button>
   </mat-toolbar> <br>
 
-
+  <mat-form-field class="example-full-width">
+    <mat-label>Search here</mat-label>
+    <input matInput type="text" [(ngModel)]="searchBoxVal">
+  </mat-form-field>
 
 <div>
-  <a routerLink="/home">Home </a> 
+   
     <div class="card-container">
-       <div class="card" *ngFor="let item of hotelForm">
+      <h1></h1>
+       <div class="card" *ngFor="let item of hotelForm |   filtar : searchBoxVal ">
         <img [src]="item.Image" alt="Card Image"> 
          <!-- <img mat-card-xl-image src='/assets/newimg/hotel-16.jpg' > -->
          <div class="card-content">
@@ -22,7 +26,7 @@
            <p>HotelAddress :{{item.HotelAddress}}</p>
            <p> HotelMenu :{{item.HotelMenu}}</p>
            <p> RoomAvailable :{{item.RoomAvailable}}</p>
-           <a color="accent" routerLink="/booknow">Booknow </a> 
+           <button class="btn-sign" (click)="booknow()">Booknow</button>
          </div>
        </div>
      </div>
@@ -33,8 +37,8 @@
  <!-- ----------------------------------------------------boooknow-------------------------------- -->
 
   
-   <!-- <div  *ngIf="showTable">  
- <form class="form" [formGroup]="bookNow">  
+    
+ <!-- <form class="form" [formGroup]="bookNow" *ngIf="showbookNow >  
       <span></span>
       <span></span>
       <span></span>
@@ -66,4 +70,4 @@
       
 </div> 
 </form>   
-</div>   -->
+   -->

@@ -5,6 +5,8 @@ import { Router } from '@angular/router';
  
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 import { CommonService } from 'src/app/common/common.service';
+import { DoialogComponent } from '../doialog/doialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-hoteldetails',
@@ -24,7 +26,7 @@ export class HoteldetailsComponent {
 
     constructor(private router:Router,
        private commonService:CommonService,
-      private apiCallService:CommonApiCallService){
+      private apiCallService:CommonApiCallService,public dialog: MatDialog){
 }
 ngOnInit(): void {
    
@@ -49,12 +51,32 @@ getdata(){
    }
 
    onDeleteHotel(id: number) {
+
+    const dialogRef = this.dialog.open(DoialogComponent, {
+      width: '250px',
+      height:'250px'
+     })
+    
+
+     dialogRef.afterClosed().subscribe((yasValue:any)=>{
+      if(yasValue === 'YES'){
+        this.deleteRecord(id);
+         
+        this.getdata();
+      }
+    
+     });
+    }
+    deleteRecord(id:number){
      this.apiCallService.deleteHotel(id).subscribe({
       next: (res) => {
-        alert('hotel deleted');
+         
+        
       },
+     
       error: console.log,
      });
+     
   }
   async edit(id: number) { 
     this.commonService .id= id;

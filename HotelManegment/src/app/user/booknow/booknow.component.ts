@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
@@ -16,7 +17,8 @@ export class BooknowComponent {
  constructor(private fB:FormBuilder,
   private router:Router,
   private apiCallService:CommonApiCallService,
-  private toaster:ToastrService){}
+  private toaster:ToastrService,
+  public dialogRef: MatDialogRef<BooknowComponent>){}
 
 
  ngOnInit(){
@@ -26,9 +28,9 @@ export class BooknowComponent {
  formDetl(){
   this.bookNow = this.fB.group({
     userName:['',[Validators.required]],
-    adharno:[''],
-     mobNo:[''],
-    amount:[''],
+    adharno:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
+     mobNo:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
+    amount:['',[Validators.required]],
   })
  }
 
@@ -51,7 +53,7 @@ async submit(){
 
    this.router.navigateByUrl('userSuccess');
     
-  
+   this.dialogRef.close();
  }
 
 

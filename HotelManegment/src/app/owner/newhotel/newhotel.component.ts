@@ -38,13 +38,13 @@ export class NewhotelComponent {
   formdata(){
   this.hotelForm = this.fb.group({
     ownerName: [this.dataById ? this.dataById.OwnerName :'', Validators.required],
-    ownerMobNo: [this.dataById ? this.dataById.OwnerMobNo :'', Validators.required],
+    ownerMobNo: [this.dataById ? this.dataById.OwnerMobNo :'', Validators.required ],
     hotelName: [this.dataById ? this.dataById.HotelName :'', Validators.required],
     hotelAddress: [this.dataById ? this.dataById.HotelAddress :'', Validators.required],
-    hotelMobile: [this.dataById ? this.dataById.HotelMobile :'', Validators.required],
+    hotelMobile: [this.dataById ? this.dataById.HotelMobile :'', Validators.required ],
     hotelMenu: [this.dataById ? this.dataById.HotelMenu :'', Validators.required],
     roomAvailable: [this.dataById ? this.dataById.RoomAvailable :'', Validators.required ],
-    image: [this.dataById ? this.dataById.Image :""],
+    image: [this.dataById ? this.dataById.Image :"/assets/newimg/hotel-10.jpg"],
   });
 }
 

@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
 import { CommonService } from 'src/app/common/common.service';
+ 
+import { DoialogComponent } from '../doialog/doialog.component';
 
 @Component({
   selector: 'app-ownersuccess',
@@ -19,7 +22,7 @@ export class OwnersuccessComponent {
   searchBoxVal:any;
 
   constructor(private router: Router, private commonApiCallService: CommonApiCallService,
-    private commonService: CommonService, private toastr: ToastrService) { }
+    private commonService: CommonService, private toastr: ToastrService,public dialog: MatDialog) { }
 
   ngOnInit() {
     console.log('oninit calling');
@@ -63,9 +66,22 @@ export class OwnersuccessComponent {
   }
 
   async delete(id: number) {
+     const dialogRef = this.dialog.open(DoialogComponent, {
+      width: '250px',
+      height:'250px'
+     })
+     dialogRef.afterClosed().subscribe((yasValue:any)=>{
+      if(yasValue === 'YES'){
+        this.deleteRecord(id);
+        this.showTable = !this.showTable;
+          this.myHotelDetails();
+      }
+     });
+    }
+
+async deleteRecord(id:number){     
     await this.commonApiCallService.deleteApiCall('hotel', id).toPromise();
-    this.showTable = !this.showTable;
-    this.myHotelDetails();
+    
   }
 
   async edit(id: number) { 

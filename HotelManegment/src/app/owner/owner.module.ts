@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { OwnerRoutingModule } from './owner-routing.module';
 import { OwnerhomeComponent } from './ownerhome/ownerhome.component'; 
 import { OwnerhotelregistrationComponent } from './ownerhotelregistration/ownerhotelregistration.component';
@@ -10,13 +9,15 @@ import { SheradModule } from '../sherad/sherad.module';
 import { OwnersigninComponent } from './ownersignin/ownersignin.component';
 import { HoteldetailsComponent } from './hoteldetails/hoteldetails.component';
 import { NewhotelComponent } from './newhotel/newhotel.component';
-import { FiltarPipe } from '../common/filtar.pipe';
+import { DoialogComponent } from './doialog/doialog.component';
+ 
+ 
+ 
  
  
 
 @NgModule({
-  declarations: [
-     
+  declarations: [  
     OwnerhomeComponent,
     OwnerhotelregistrationComponent,
     OwnersignupComponent,
@@ -24,7 +25,8 @@ import { FiltarPipe } from '../common/filtar.pipe';
     OwnersigninComponent,
     HoteldetailsComponent,
     NewhotelComponent,
-    FiltarPipe
+    DoialogComponent,
+    
   ],
   imports: [
     CommonModule,

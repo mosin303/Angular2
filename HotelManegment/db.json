@@ -165,7 +165,7 @@
       "HotelMobile": "8574955545",
       "HotelMenu": "non veg",
       "RoomAvailable": "60",
-      "Image": "/assets/image/hotel-10.jpg",
+      "Image": "/assets/image/hotel-5.jpg",
       "id": 9
     },
     {
@@ -176,7 +176,7 @@
       "HotelMobile": "785656",
       "HotelMenu": "veg",
       "RoomAvailable": "80",
-      "Image": "/assets/image/hotel-5.jpg",
+      "Image": "/assets/image/hotel-6.jpg",
       "id": 11
     },
     {
@@ -187,7 +187,7 @@
       "HotelMobile": "08888696921",
       "HotelMenu": "veg",
       "RoomAvailable": "52",
-      "Image": "/assets/image/hotel-4.jpg",
+      "Image": "/assets/image/hotel-7.jpg",
       "id": 13
     },
     {
@@ -198,7 +198,7 @@
       "HotelMobile": "8574955545",
       "HotelMenu": "non veg",
       "RoomAvailable": "60",
-      "Image": "/assets/image/hotel-10.jpg",
+      "Image": "/assets/image/hotel-8.jpg",
       "id": 15
     },
     {
@@ -209,7 +209,7 @@
       "HotelMobile": "785656",
       "HotelMenu": "veg",
       "RoomAvailable": "80",
-      "Image": "/assets/image/hotel-5.jpg",
+      "Image": "/assets/image/hotel-9.jpg",
       "id": 14
     },
     {
@@ -231,16 +231,16 @@
       "HotelMobile": "8574955545",
       "HotelMenu": "non veg",
       "RoomAvailable": "60",
-      "Image": "/assets/image/hotel-10.jpg",
+      "Image": "/assets/image/hotel-11.jpg",
       "id": 19
     },
     {
-      "OwnerName": "mosin",
+      "OwnerName": "tohid",
       "OwnerMobNo": "7898548574",
       "HotelName": "sahi Hotel",
       "HotelAddress": "umadi",
       "HotelMobile": "08888696921",
-      "HotelMenu": "non veg",
+      "HotelMenu": "Non veg",
       "RoomAvailable": "500",
       "Image": "/assets/image/hotel-13.jpg",
       "id": 22
@@ -330,7 +330,7 @@
       "HotelMobile": "585874855",
       "HotelMenu": "veg",
       "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-11.jpg",
+      "Image": "/assets/newimg/hotel-7.jpg",
       "id": 32
     },
     {
@@ -341,7 +341,7 @@
       "HotelMobile": "585874855",
       "HotelMenu": "veg",
       "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-11.jpg",
+      "Image": "/assets/newimg/hotel-8.jpg",
       "id": 33
     },
     {
@@ -352,8 +352,30 @@
       "HotelMobile": "585874855",
       "HotelMenu": "veg",
       "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-11.jpg",
+      "Image": "/assets/newimg/hotel-10.jpg",
       "id": 34
+    },
+    {
+      "OwnerName": "tohid",
+      "OwnerMobNo": "5241633526",
+      "HotelName": "Hotel Laibare",
+      "HotelAddress": "mumbai",
+      "HotelMobile": "487596585966",
+      "HotelMenu": "veg",
+      "RoomAvailable": "451",
+      "Image": "/assets/newimg/hotel-11.jpg",
+      "id": 35
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 4785961234,
+      "HotelName": "Moon Hatel",
+      "HotelAddress": "pune",
+      "HotelMobile": 7896541230,
+      "HotelMenu": "veg nonveg",
+      "RoomAvailable": 155,
+      "Image": "/assets/newimg/hotel-11.jpg",
+      "id": 36
     }
   ],
   "hotelBooking": [
@@ -405,6 +427,41 @@
       "Mobile": "5488796565",
       "Amount": 400,
       "id": 7
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": "84586968585",
+      "Mobile": "1234565566",
+      "Amount": 400,
+      "id": 8
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": "84586968585",
+      "Mobile": "1234565566",
+      "Amount": 400,
+      "id": 9
+    },
+    {
+      "UserName": "salman",
+      "AdharNo": "584964587454",
+      "Mobile": "5874961236",
+      "Amount": 125,
+      "id": 10
+    },
+    {
+      "UserName": "salman",
+      "AdharNo": "584964587454",
+      "Mobile": "5874961236",
+      "Amount": 125,
+      "id": 11
+    },
+    {
+      "UserName": "tanveer",
+      "AdharNo": "524585785454",
+      "Mobile": "545558585425",
+      "Amount": 100,
+      "id": 12
     }
   ]
 }
