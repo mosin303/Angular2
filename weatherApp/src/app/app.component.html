@@ -1,0 +1,54 @@
+<nav class="navbar bg-primary" data-bs-theme="dark">
+   <div class="container-fluid">
+    <a class="navbar-brand" >Weather</a>
+     
+  </div>
+</nav><br><br>
+ 
+  <div class="row row-cols-lg-auto g-3 align-items-center">
+     
+      <input type="text"  value="mumbai" placeholder="City" #inp>
+    </div>
+  
+  <div class="col-12">
+    <button  class="btn btn-primary" (click)="getData(inp.value)">Submit</button>
+  </div>
+  
+  <div class="card text-bg-dark">
+    <img src="../assets/weathier-3.jpg" class="card-img" alt="...">
+    <div class="card-img-overlay">
+      <h5 class="card-title">{{inp.value}}</h5>
+      <p> <b>City Name :---- </b>{{weatherData.name}}</p>
+<p> <b>Tempreture  :----  </b>{{weatherData.main.temp}}°C</p><i class="bi bi-cloud-sun-fill"></i>
+<p> <b>Min Tempreture  :----  </b>{{weatherData.main.temp_min}}°C</p>
+<p> <b>Max Tempreture  :----  </b>{{weatherData.main.temp_max}}°C</p>
+<p> <b>Pressure  :---- </b> {{weatherData.main.pressure}}N/m2</p>
+<p> <b>Humidity  :----  </b>{{weatherData.main.humidity}}g.m-3</p>
+<p> <b>Wind Speed  :----  </b>{{weatherData.wind.speed}}m/s</p>
+<p> <b>Country  :----  </b>{{weatherData.sys.country}}</p>
+       
+    </div>
+  </div>
+ 
+
+<!-- -------------------------------------------------------------- -->
+<!-- <div class="header">
+  <div class="logo">Weather App</div>
+  <div class="container">
+    <input value="mumbai" type="text" #inp>
+    <button (click)="getData(inp.value)">Fetch Data</button>
+  </div>
+</div>
+
+<div class="box" *ngIf="weatherData">
+    <p> <b>City Name :---- </b>{{weatherData.name}}</p>
+    <p> <b>Tempreture  :----  </b>{{weatherData.main.temp}}°C</p>
+    <p> <b>Min Tempreture  :----  </b>{{weatherData.main.temp_min}}°C</p>
+    <p> <b>Max Tempreture  :----  </b>{{weatherData.main.temp_max}}°C</p>
+    <p> <b>Pressure  :---- </b> {{weatherData.main.pressure}}N/m2</p>
+    <p> <b>Humidity  :----  </b>{{weatherData.main.humidity}}g.m-3</p>
+    <p> <b>Wind Speed  :----  </b>{{weatherData.wind.speed}}m/s</p>
+    <p> <b>Country  :----  </b>{{weatherData.sys.country}}</p>
+</div>
+
+<br><br><br><br> -->
