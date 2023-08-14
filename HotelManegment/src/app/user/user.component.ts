@@ -12,6 +12,9 @@ export class UserComponent {
   constructor(private router:Router,
     private apidata:CommonApiCallService, ){}
 
+
+    
+
     home(){
     this.router.navigateByUrl('home');
 

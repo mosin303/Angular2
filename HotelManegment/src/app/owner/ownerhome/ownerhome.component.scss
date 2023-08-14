@@ -12,3 +12,16 @@
       background-size: cover;
       background-repeat: no-repeat;
   }
+  .btn {
+    font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 4px;
+      padding: 4px ;
+    
+  }
+  .but:hover {
+    background: #2df54e;
+  }

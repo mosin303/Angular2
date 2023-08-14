@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
+import { FormBuilder, FormGroup, } from '@angular/forms';
+ 
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { CommonApiCallService } from 'src/app/common/common-api-call.service';
-import { BooknowComponent } from '../booknow/booknow.component';
+ 
 
 @Component({
   selector: 'app-usersuccess',
@@ -24,7 +24,7 @@ searchBoxVal: any;
   constructor(private fB:FormBuilder,
     private router:Router,
     private apiCallService:CommonApiCallService,
-    private toaster:ToastrService ,public dialog: MatDialog){}
+    private toastr:ToastrService , ){}
 
      
     ngOnInit(): void {
@@ -35,26 +35,60 @@ searchBoxVal: any;
         this.hotelForm = response;
       });
        
-     
-    }
+        
+    } 
 
 logout(){
   this.router.navigateByUrl('home')
 }
 booknow(){
-  const dialogRef = this.dialog.open(BooknowComponent, {
-    // data: {id:id},
-     width: '350px',
-     height:'550px'
-   })
-   dialogRef.afterClosed().subscribe((yesValue:any)=>{
-    if(yesValue === 'YES'){
-      
-    } 
-  });
    
+  this.router.navigateByUrl('booknow')
+  
   }
-
 }
+
+  // ---------------------------booking---------------
+
+ 
+//  formDetl(){
+//   this.bookNow = this.fB.group({
+//     userName:['',[Validators.required]],
+//     adharno:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
+//      mobNo:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
+//     amount:['',[Validators.required]],
+//   })
+//  }
+
+// async submit(){
+  
+//    let endPoint = 'hotelBooking';
+  
+//   let request = {
+//     UserName : this.bookNow.value.userName,
+//     AdharNo : this.bookNow.value.adharno,
+//     Mobile : this.bookNow.value.mobNo,
+//     Amount : this.bookNow.value.amount,
+//   }
+//    await this.apiCallService.postApicall(endPoint,request).toPromise() 
+//      console.log(this.bookNow.value);
+     
+    
+  
+//   this.toaster.success(`Booking `,`Successful`)
+
+//    this.router.navigateByUrl('userSuccess');
+    
+    
+//  }
+//  booknow(){
+//   this.showbookNow = !this.showbookNow;
+//   this.formDetl();
+// }
+
+
+
+
+// }
  
  

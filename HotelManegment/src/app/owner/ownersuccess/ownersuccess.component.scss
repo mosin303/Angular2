@@ -42,4 +42,22 @@ table,tr,th,td{
   tr:hover {
     background-color: #e6f7ff;
   }
+
+
+  /* Global Styles */
+.my-dialog-container {
+  background-color: aqua;
+}
+
+.my-dialog-title {
+  background-color: rgb(192, 80, 11);
+}
+
+.my-dialog-content {
+  background-color: #15ff00;
+}
+
+.my-dialog-actions {
+  background-color: rgb(118, 8, 104);
+}
   

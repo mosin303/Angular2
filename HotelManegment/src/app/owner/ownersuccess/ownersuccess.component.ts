@@ -68,7 +68,8 @@ export class OwnersuccessComponent {
   async delete(id: number) {
      const dialogRef = this.dialog.open(DoialogComponent, {
       width: '250px',
-      height:'250px'
+      height:'250px',
+      
      })
      dialogRef.afterClosed().subscribe((yasValue:any)=>{
       if(yasValue === 'YES'){

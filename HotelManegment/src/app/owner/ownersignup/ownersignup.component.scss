@@ -26,10 +26,10 @@ body {
 
 .form {
     position: relative;
-    padding: 60px 15px;
+    padding: 30px 15px;
     width: 370px;
-    height: 600px;
-    background: #0c0116;
+    height: 700px;
+    background: #6404be;
     overflow: hidden;
     box-shadow: 0px 0px 10px 0px rgb(116, 119, 114);
     border-radius: 5px;
@@ -41,7 +41,7 @@ body {
     width: 98%;
     top: 50%;
     left: 50%;
-    background: #0c0116;
+    background: #fcfdfd;
     transform: translate(-50%, -50%);
 }
 
@@ -60,7 +60,7 @@ body {
 
 .input {
     display: block;
-    padding: 12px 15px;
+    padding: 12px 10px;
     width: 100%;
     left: 50%;
     border-radius: 10px;
@@ -125,7 +125,7 @@ a {
 }
 
 .form span:nth-child(3) {
-    background: #800080;
+    background: #fb12fb;
     right: -48%;
     top: 0px;
     animation: 5s span3 infinite linear;

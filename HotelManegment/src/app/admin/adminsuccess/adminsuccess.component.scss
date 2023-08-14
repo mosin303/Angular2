@@ -1,0 +1,69 @@
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  
+  p{
+    flex: content;
+  }
+  
+  ::ng-deep.mat-typography{
+    background-image: url('/assets/image/hotel-3.jpg'); 
+     
+  }
+   
+  .example-full-width {
+    width: 80%;
+  }
+
+  h1{
+     
+     color: red;
+    text-align: center;
+    // font-weight: bold;
+    // width: 80%;
+  }
+
+
+  table,td{
+      border:2px solid rgb(11, 92, 2);
+      
+    }
+    th{
+      border:4px solid rgb(9, 176, 51);
+       
+    }
+    table {
+      width: 80%;
+      border-collapse: collapse;
+      background-color: #73fa97;
+      text-align: center;
+      margin-left: 20px;
+    
+    }
+    
+    thead {
+      background-color: #80eb1b;
+    }
+    
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #05a931;
+    
+    }
+    
+    th {
+      font-weight: bold;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #0dec6a;
+    }
+    
+    tr:hover {
+      background-color: #0998da;
+    }
+
+     
+    

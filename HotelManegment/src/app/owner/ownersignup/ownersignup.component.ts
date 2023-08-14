@@ -32,8 +32,8 @@ export class OwnersignupComponent {
   formDef() {
     this.signinform = this.fB.group({
       userName: ['',[Validators.required]],
-      name: ['', [Validators.required,Validators.minLength(5), Validators.pattern("[a-zA-Z ]*$")]],
-      pan: ['',[Validators.required, Validators.pattern("^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}$")]],//ABMAS2345M
+      name: ['', [Validators.required,Validators.minLength(5), Validators.pattern("[a-zA-Z ]*$") ,this.commonService.whiteSpaceValidator]],
+      pan: ['',[Validators.required, Validators.pattern("^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}$"),Validators.minLength(10), Validators.maxLength(10)]],//ABMAS2345M
       mobNo: ['', [Validators.required,Validators.pattern("[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
       password: ['',[Validators.required, Validators.minLength(6),Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{5,}$")]],
       email: ['',[Validators.required,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
@@ -57,7 +57,7 @@ export class OwnersignupComponent {
       this.postResponse =resp;
       
     })
-    this.toaster.success(`SignUp`,`Successful`)
+    this.toaster.success(`wel-come ${this.signinform.value.id}`,`Successfully login `)
 
      this.router.navigateByUrl('owner/hoteldetails');
       
@@ -69,3 +69,6 @@ signIn(){
   this.router.navigateByUrl('owner/ownerSignIn');
 }
 }
+
+
+

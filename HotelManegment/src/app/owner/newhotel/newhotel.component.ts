@@ -15,7 +15,7 @@ export class NewhotelComponent {
    editId!:number;
   postResponse:any;
   journey!: string;
-   
+  selectedImage: File | null = null;
   dataById: any;
    
   constructor(private fb: FormBuilder,
@@ -72,7 +72,7 @@ let request = {
       console.log(res);
     })
     this.toaster.success('Hotel Update data Successfull', "Congratulations!!")
-    
+    // this.toaster.success(`Hotel Update data Successfull ${this.hotelForm.value[0].OwnerName}`,`Congratulations!!  `)
      }
       else{
 this.apiCallService.postApiCall(endpoint,request).subscribe((resp:any)=>{
@@ -81,34 +81,29 @@ this.apiCallService.postApiCall(endpoint,request).subscribe((resp:any)=>{
 })
  
 }
-this.toaster.success('Hotel Registration Successfull', "Congratulations!!")
-this.router.navigateByUrl('owner/ownerSuccess');     
+this.router.navigateByUrl('owner/ownerSuccess');  
+// this.toaster.success('Hotel data Successfull', "Congratulations!!")
+this.toaster.success(`Hotel data Successfull ${this.hotelForm.value[0].ownerName}`,`Successfully  `)
+   
 }
 
      ngOnDestroy(){ 
       this.commonService.dataById = {};
       this.commonService.id = '' ;
      }
+
+    //  handleImageInput(event: any) {
+    //   const file = event.target.files[0];
+    //   this.selectedImage = file;
+  
+    //   this.hotelForm.patchValue({
+    //     image: URL.createObjectURL(file) // Show image preview
+    //   });
+    // }
 } 
  
 
  
-// submit(){
-//   console.log(this.signUpForm.value);
-//   let endPoint = 'posts';
-//   if(this.journey != 'update'){
-//   this.ApidataSevice.postApiCall(endPoint,this.signUpForm.value).subscribe(response =>{
-//   this.postApiResponse = response;
-//   })
-// }
-// else{
-//   this.ApidataSevice.putApiCall(endPoint,this.signUpForm.value,'1').subscribe(res=>{
-//     console.log(res);
-    
-//   })
-//  }
-// }
-
 
 
  

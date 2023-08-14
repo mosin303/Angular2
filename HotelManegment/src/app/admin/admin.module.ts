@@ -4,17 +4,14 @@ import { CommonModule } from '@angular/common';
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
 import { SheradModule } from '../sherad/sherad.module';
-import { RegistrationComponent } from './registration/registration.component';
-import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
+import { AdminsuccessComponent } from './adminsuccess/adminsuccess.component';
 
 
 @NgModule({
   declarations: [
-    AdminComponent,
-    RegistrationComponent,
-    SignupComponent,
-    LoginComponent
+    AdminComponent, 
+    LoginComponent, AdminsuccessComponent
   ],
   imports: [
     CommonModule,

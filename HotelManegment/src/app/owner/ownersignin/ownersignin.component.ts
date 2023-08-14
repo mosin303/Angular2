@@ -59,7 +59,7 @@ export class OwnersigninComponent {
     if (this.ownerData) {
       this.isValidUser();
       if (this.validUser) {
-        this.toaster.success(`login`,`Successful`) 
+        this.toaster.success(`wel-come ${this.ownerData[0].Username}`,`Successfully login `)   
         this.router.navigateByUrl('owner/ownerSuccess');
       }
       else {
@@ -84,6 +84,7 @@ export class OwnersigninComponent {
   }
 signUp(){
 this.router.navigateByUrl('owner/ownerSignUp')
+
 }
 
 
@@ -114,7 +115,7 @@ async updatePassword() {
     //   console.log(respo);
     // })
     await this.commonApiCallService.patchApiCall(this.journey, request, user.id).toPromise()
- 
+    this.toaster.success(`wel-come ${this.ownerData[0].userNam}`,`Successfully login `)  
   }
   else{
     alert('user is not exist')

@@ -14,6 +14,7 @@ export class SigninComponent {
   signinform!: FormGroup;
   journey!:string;
   postResponse:any;
+  data: any;
 
   constructor (private router:Router,
     private fB:FormBuilder,
@@ -32,7 +33,7 @@ export class SigninComponent {
   formDef() {
     this.signinform = this.fB.group({
       id: ['',[Validators.required]],
-      name: ['', [Validators.required, Validators.pattern("[a-zA-Z ]*$")]],
+      name: ['', [Validators.required, Validators.pattern("[a-zA-Z ]*$"),this.commonService.whiteSpaceValidator]],
       mobNo: ['', [Validators.required,Validators.pattern("[0-9]*$"), Validators.minLength(10), Validators.maxLength(10)]],
       pan: ['',[Validators.required, Validators.pattern("^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]{1}$")]],
       password: ['',[Validators.required, Validators.minLength(6),Validators.pattern("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}$")]],
@@ -41,7 +42,7 @@ export class SigninComponent {
     })
   }
 
-  submit(){
+   async submit(){
     let request = {
       Username : this.signinform.value.id,
       Name : this.signinform.value.name,
@@ -52,18 +53,22 @@ export class SigninComponent {
       Gender : this.signinform.value.gender,
     }
 
-    this.apiCallService.postApicall(this.journey,request).subscribe(resp=>{
-      console.log(resp);
-      this.postResponse =resp;
+     this.data = await this.apiCallService.postApicall(this.journey,request).toPromise()
       
-    })
-    this.toaster.success(`SignUp`,`Successful`)
-
-     this.router.navigateByUrl('/userSuccess');
       
+     this.router.navigateByUrl('userSuccess');
+      this.toaster.success(`wel-come ${this.signinform.value.id}`,`Successfully login `)
+
+      
+  }
+    
+  
+       
+      
+    
 
 
-}
+
 home(){
   this.router.navigateByUrl('home');
 }

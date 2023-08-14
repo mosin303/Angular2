@@ -15,7 +15,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { FiltarPipe } from '../common/filtar.pipe';
-
+import {MatSelectModule} from '@angular/material/select';
  
 
 
@@ -43,6 +43,7 @@ import { FiltarPipe } from '../common/filtar.pipe';
       MatGridListModule,
       MatMenuModule,
       MatDialogModule,
+      MatSelectModule,
   ],
   exports:[
     
@@ -63,7 +64,8 @@ import { FiltarPipe } from '../common/filtar.pipe';
       MatGridListModule,
       MatMenuModule,
       MatDialogModule,
-      FiltarPipe
+      FiltarPipe,
+      MatSelectModule,
   ]
 })
 export class SheradModule { }

@@ -1,29 +1,37 @@
- 
-
 <body>
-<form class="form" [formGroup]="hotelForm">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <div class="form-inner">
-        <a routerLink="/owner/hoteldetails">Home </a> 
-        <h2>New Hotel</h2>        
-         <div class="content">
-        <input type="text" class="input" placeholder="ownerName" formControlName="ownerName">
-        <input type="number" class="input" placeholder="ownerMobNo" formControlName="ownerMobNo">
-        <input type="text" class="input" placeholder="hotelName" formControlName="hotelName">
-        <input type="text" class="input" placeholder="hotelAddress" formControlName="hotelAddress">
-        <input type="number" class="input" placeholder="hotelMobile" formControlName="hotelMobile">
-        <input type="text" class="input" placeholder="hotelMenu" formControlName="hotelMenu"> 
-        <input type="number" class="input" placeholder="roomAvailable" formControlName="roomAvailable">
-        <input type="text" class="input" placeholder="imageUrl" formControlName="image">
-        <p>Change the last number in imageUrl 1 to 41 only </p>
-        
-        <button type="submit" class="btn"  [disabled]="!hotelForm.valid" (click)="onSubmit()">{{this. editId ? 'Update':'Submit'}}</button>
-    </div>
-    </div>
-</form>
-</body>
- 
- 
+    <form class="form" [formGroup]="hotelForm">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="form-inner">
+            <a routerLink="/owner/hoteldetails">Back </a>
+            <h2>New Hotel</h2>
+            <div class="content">
+                <input type="text" class="input" placeholder="ownerName" formControlName="ownerName">
+                <input type="number" class="input" placeholder="ownerMobNo" formControlName="ownerMobNo">
+                <input type="text" class="input" placeholder="hotelName" formControlName="hotelName">
+                <input type="text" class="input" placeholder="hotelAddress" formControlName="hotelAddress">
+                <input type="number" class="input" placeholder="hotelMobile" formControlName="hotelMobile">
+                <!-- <input type="text" class="input" placeholder="hotelMenu" formControlName="hotelMenu">  -->
+                <mat-select class="input" placeholder="HotelMenu" formControlName="hotelMenu">
+                    <mat-option value="Veg">Veg</mat-option>
+                    <mat-option value="Non-Veg">Non-Veg</mat-option>
+                  </mat-select>
+
+                <input type="number" class="input" placeholder="roomAvailable" formControlName="roomAvailable">
+                <input type="text" class="input" placeholder="imageUrl" formControlName="image">
+                <p>Change the last number in imageUrl 1 to 41 only </p>
+
+                <button type="submit" class="btn" [disabled]="!hotelForm.valid" (click)="onSubmit()">{{this. editId ?
+                    'Update':'Submit'}}</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    <!-- <mat-select placeholder="hotelMenu" class="input">
+    <mat-option placeholder="hotelMenu" value="Veg" formControlName="hotelMenu">Veg</mat-option>
+    <mat-option placeholder="hotelMenu"  value="Non-Vag" formControlName="hotelMenu">Non-Veg</mat-option>
+</mat-select> -->

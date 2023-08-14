@@ -2,9 +2,10 @@
   <mat-toolbar color="primary">
      
     <p>WellCome To Hotel</p>
+    <button mat-raised-button color="accent" routerLink="/userSuccess">back</button> 
     <button mat-raised-button color="accent" routerLink="/home">logout</button> 
     <button mat-raised-button color="accent" routerLink="/booknow">Booknow</button> 
-    <button class="btn-sign"  (click)="booknow()">Booknow</button>
+    <!-- <button class="btn-sign"  (click)="booknow()">Booknow</button> -->
   </mat-toolbar> <br>
 
   <mat-form-field class="example-full-width">
@@ -17,57 +18,60 @@
     <div class="card-container">
       <h1></h1>
        <div class="card" *ngFor="let item of hotelForm |   filtar : searchBoxVal ">
-        <img [src]="item.Image" alt="Card Image"> 
+        <img class="img-fluid" [src]="item.Image" alt="Card Image"> 
          <!-- <img mat-card-xl-image src='/assets/newimg/hotel-16.jpg' > -->
          <div class="card-content">
-           <h3>HotelName :{{ item.HotelName }}</h3>
-           <p>OwnerName :{{item.OwnerName}}</p>
-           <p>OwnerMobNo :{{item.OwnerMobNo}}</p>
-           <p>HotelAddress :{{item.HotelAddress}}</p>
-           <p> HotelMenu :{{item.HotelMenu}}</p>
-           <p> RoomAvailable :{{item.RoomAvailable}}</p>
-           <button class="btn-sign" (click)="booknow()">Booknow</button>
+          <p>------------------------------------------------------</p>
+           <h3> <mat-icon>hotel</mat-icon>HotelName :{{ item.HotelName }}</h3>
+           <p><mat-icon>person</mat-icon>OwnerName :{{item.OwnerName}}</p>
+           <p><mat-icon>phone_iphone</mat-icon> OwnerMobNo :{{item.OwnerMobNo}}</p>
+           <p> <mat-icon>room</mat-icon>HotelAddress :{{item.HotelAddress}}</p>
+           <p> <mat-icon>restaurant_menu</mat-icon>HotelMenu :{{item.HotelMenu}}</p>
+           <p><mat-icon>hotel</mat-icon> RoomAvailable :{{item.RoomAvailable}}</p>
+           <mat-icon>save</mat-icon><button class="btn-sign" (click)="booknow()">Booknow</button>
          </div>
        </div>
      </div>
     
-   </div>
-
+   
    
  <!-- ----------------------------------------------------boooknow-------------------------------- -->
 
   
-    
- <!-- <form class="form" [formGroup]="bookNow" *ngIf="showbookNow >  
-      <span></span>
-      <span></span>
-      <span></span>
-      <span></span>
-      <div class="form-inner">
-
-  <div class="content">
-          
-  <mat-form-field class="example-full-width">
-    <mat-label> UserNane</mat-label>
-    <input matInput type="text" formControlName="userName">
-  </mat-form-field>
-  <mat-form-field class="example-full-width">
-      <mat-label> Adhar No</mat-label>
-      <input matInput type="text" formControlName="adharno" >
-    </mat-form-field> 
-    <mat-form-field class="example-full-width">
-      <mat-label> MobNo</mat-label>
-      <input matInput type="text" formControlName="mobNo">
-    </mat-form-field>
-    <mat-form-field class="example-full-width">
-      <mat-label>Amount</mat-label>
-      <input matInput type="number" formControlName="amount" >
-      <span matTextPrefix>$&nbsp;</span>
-      <span matTextSuffix>.00</span>
-    </mat-form-field>
-    <button type="submit" class="btn" [disabled]="!bookNow " (click)="submit()">Submit</button>
-</div>
+ <!-- <form class="form" [formGroup]="bookNow" *ngIf="showbookNow">  
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+  <div class="form-inner">
+    <h2>Hotel Booking</h2>
+<div class="content">
       
+<mat-form-field class="example-full-width">
+<mat-label> UserNane</mat-label>
+<input matInput type="text" formControlName="userName">
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label> Adhar No</mat-label>
+  <input matInput type="number" formControlName="adharno" >
+  <span matTextPrefix>$&nbsp;</span>
+  <span matTextSuffix>.00</span>
+</mat-form-field> 
+<mat-form-field class="example-full-width">
+  <mat-label> MobNo</mat-label>
+  <input matInput type="number" formControlName="mobNo">
+  <span matTextPrefix>$&nbsp;</span>
+  <span matTextSuffix>.00</span>
+</mat-form-field>
+<mat-form-field class="example-full-width">
+  <mat-label>Amount</mat-label>
+  <input matInput type="number" formControlName="amount" >
+  <span matTextPrefix>$&nbsp;</span>
+  <span matTextSuffix>.00</span>
+</mat-form-field>
+<button type="submit" class="btn" [disabled]="!bookNow.valid" (click)="submit()">Submit</button>
+</div>
+  
 </div> 
 </form>   
-   -->
+</div> -->

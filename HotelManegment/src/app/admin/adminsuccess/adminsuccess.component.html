@@ -1,0 +1,108 @@
+<div class="container">
+    <mat-toolbar>
+        <span class="example-spacer">MY HOTALS </span>
+         
+        <!-- <button mat-raised-button color="accent" routerLink="/home">Home</button> -->
+       
+    
+  <button mat-raised-button color="accent" routerLink="/home">Home</button>
+  <!-- <button mat-raised-button color="accent" routerLink="/owner/hoteldetails">hoteldetails</button> -->
+  <button mat-raised-button color="accent" (click)="myHotelDetails()">My Hotel Details</button>
+  <button mat-raised-button color="accent" (click)="hotleBooking()">hotleBooking</button>
+   
+ 
+   </mat-toolbar> <br>
+  
+  <!-- <div >
+    <mat-form-field class="example-full-width">
+    <mat-label>Search here</mat-label>
+    <input matInput type="text" [(ngModel)]="searchBoxVal">
+  </mat-form-field> -->
+
+  <div  *ngIf="showTable">
+    <h1>hotel list</h1>
+  <div *ngIf ="hotelData" class="table-container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search here</mat-label>
+      <input matInput type="text" [(ngModel)]="searchBoxVal">
+    </mat-form-field>
+
+     <table > 
+       
+       <tr colsapan="3">
+        <h1> hotel list </h1></tr>   
+      
+      <tr>
+        
+        <th *ngFor="let heading of tableHotl">{{heading}}</th>
+    </tr>
+    
+     <tr *ngFor="let hotelData of hotelData | filtar : searchBoxVal"> 
+         <td>{{hotelData.OwnerName}}</td>
+         <td> {{hotelData.HotelMobile}}</td>
+         <td>{{hotelData.HotelName}}</td>
+         <td> {{hotelData.HotelAddress}}</td>
+         <td>{{hotelData.OwnerMobNo}}</td>
+         <td>{{hotelData.HotelMenu}}</td>
+        <td>{{hotelData.RoomAvailable}}</td>
+         <td><mat-icon (click)="delete(hotelData.id)">delete</mat-icon></td>
+          
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div  *ngIf="!showTable">
+  <h1>HotalBooking list </h1>
+  <div *ngIf="formData" class="table-container"> 
+    <mat-form-field class="example-full-width">
+      <mat-label>Search here</mat-label>
+      <input matInput type="text" [(ngModel)]="searchBoxVal">
+    </mat-form-field>
+
+    <table>
+        <tr> <h1>HotalBooking list </h1></tr>
+       <tr>
+        <th *ngFor="let heading of tableBookNow ">{{heading}}</th>
+       </tr> 
+       <tr *ngFor="let tableData of formData | filtar : searchBoxVal"> 
+        <td>{{tableData.UserName}}</td>
+        <td>{{tableData.AdharNo}}</td>
+        <td>{{tableData.Mobile}}</td>
+        <td>{{tableData.Amount}}</td>
+       </tr>
+    </table>
+     
+</div><br><br><br><br><br><br><br><br><br><br><br><br>
+ </div>
+
+ 
+  <!-- <div *ngIf="hotelData" class="table-container">
+    <mat-form-field class="example-full-width">
+      <mat-label>Search here</mat-label>
+      <input matInput type="text" [(ngModel)]="searchBoxVal">
+    </mat-form-field>
+
+     <table >
+      <tr>
+        <th *ngFor="let heading of tableOwner">{{heading}}</th>
+    </tr>
+    
+     <tr *ngFor="let hotelData of hotelOwner | filtar : searchBoxVal"> 
+         <td>{{hotelData.Username}}</td>
+         <td> {{hotelData.Name}}</td>
+         <td>{{hotelData.Mobile}}</td>
+         <td> {{hotelData.Pan}}</td>
+         <td>{{hotelData.Password}}</td>
+         <td>{{hotelData.Email}}</td>
+        <td>{{hotelData.Gender}}</td>
+         <td><mat-icon (click)="delete(hotelData.id)">delete</mat-icon></td>
+          
+      </tr>
+    </table>
+  </div> -->
+ 
+<!-- "Username" ,"Name" ,"Mobile", "Pan" ,"Password" ,"Email","Gender"  -->
+
+
+ 

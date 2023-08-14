@@ -18,7 +18,7 @@ export class BooknowComponent {
   private router:Router,
   private apiCallService:CommonApiCallService,
   private toaster:ToastrService,
-  public dialogRef: MatDialogRef<BooknowComponent>){}
+   ){}
 
 
  ngOnInit(){
@@ -50,10 +50,13 @@ async submit(){
     
   
   this.toaster.success(`Booking `,`Successful`)
+  
 
-   this.router.navigateByUrl('userSuccess');
+  this.toaster.success(`wel-come ${this.bookNow.value.userName}`,`Successfully login `)
+
+   
     
-   this.dialogRef.close();
+    
  }
 
 

@@ -18,39 +18,12 @@
           <input type="text" class="input" placeholder="Password" formControlName="password">
          
           <button type="submit" class="btn" [disabled]="!loginform.valid" (click)="submit()">Submit</button><br><br>
-          <a   type="submit" class="btn-sign" routerLink="/signin" > New Signin</a> 
+          <a > Don't have an account?</a><a   type="submit" class="btn-sign" routerLink="/signin" > New Signin</a> 
       </div>
       </div>
   </form>
   </body>
-<!-- <div> -->
-<!-- <mat-card class="example-form">
-    <mat-card-header>
-        <h1>Login</h1>
-    </mat-card-header>
-    <mat-card-content> 
-        <form  [formGroup]="loginform">
-            <mat-form-field class="example-full-width" >
-              <mat-label>User Name</mat-label>
-              <input matInput formControlName="username" >
-            </mat-form-field>
-            
-              <mat-form-field class="example-full-width">
-                <mat-label>Password</mat-label>
-                <input matInput formControlName="password" >
-              </mat-form-field>
- 
-            <div class="example-button-row">
-               
-                <button mat-button class="sumit-btn" [disabled]="!loginform.valid" (click)="submit()">Submit</button>&nbsp;
-                <button mat-button class="login-btn" routerLink="/signin" >Signin-Btn</button>
-         </div> 
-        </form>
-          
-    </mat-card-content>
-  </mat-card>
-</div> -->
- 
+
 
 
  

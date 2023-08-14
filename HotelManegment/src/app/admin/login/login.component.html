@@ -1,28 +1,58 @@
-<!--   
-
+   <a routerLink="/home">Home </a> 
 <body>
-    <form class="form" [formGroup]="hotelForm">
+    
+    <form class="form" [formGroup]="adminForm" *ngIf="showForm">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         <div class="form-inner">
-            <a routerLink="/owner/hoteldetails">Home </a> 
-            <h2>New Hotel</h2>        
+            <h2>Sign Up </h2> 
+           <!-- <h2>New Hotel</h2>         -->
         <div class="content">
-            <input type="text" class="input" placeholder="ownerName" formControlName="ownerName">
-            <input type="text" class="input" placeholder="ownerMobNo" formControlName="ownerMobNo">
-            <input type="text" class="input" placeholder="hotelName" formControlName="hotelName">
-            <input type="text" class="input" placeholder="hotelAddress" formControlName="hotelAddress">
-            <input type="text" class="input" placeholder="hotelMobile" formControlName="hotelMobile">
-            <input type="text" class="input" placeholder="hotelMenu" formControlName="hotelMenu"> 
-            <input type="text" class="input" placeholder="roomAvailable" formControlName="roomAvailable">
-            <input type="text" class="input" placeholder="imageUrl" formControlName="image">
-            
-            <button type="submit" class="btn"  [disabled]="!hotelForm.valid" (click)="onSubmit()">{{hotelForm? 'Update':'Submit'}}</button>
+            <input type="text" class="input" placeholder="UserName" formControlName="userName">
+            <input type="text" class="input" placeholder="Name" formControlName="name">
+            <input type="text" class="input" placeholder="Pancard No" formControlName="pan">
+            <input type="text" class="input" placeholder="City" formControlName="city">
+            <input type="text" class="input" placeholder="Mobile" formControlName="mobile">
+            <input type="text" class="input" placeholder="Email" formControlName="email"> 
+            <input type="text" class="input" placeholder="Password" formControlName="password">
+             <input type="text" class="input" placeholder="ConfirmPassword" formControlName="confirmPassword">
+             &nbsp;<a class="radio">Gender</a><br>
+             <input type="radio"  value="male"   formControlName="gender"><a>Male</a>&nbsp;
+             <input type="radio"  value="female"  formControlName="gender"><a>Female </a>&nbsp;
+             <input type="radio"  value="Other"   formControlName="gender"><a>Other</a>&nbsp;
+             <button type="submit" class="btn"  [disabled]="!adminForm.valid" (click)="onSubmit()">Submit</button><br> <br>
+             ----- <a> Have an account?  </a><a class="btn-sign" (click)=" showlogin()"> Log in</a>
+        </div>
+        </div>
+    </form>
+
+    <form class="loginform" [formGroup]="loginForm" *ngIf="!showForm">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="form-inner">
+            <h2>login Form</h2>        
+        <div class="content">
+            <input type="text" class="input" placeholder="UserName" formControlName="userName">
+            <input type="text" class="input" placeholder="Password" formControlName="password"> 
+            <button type="submit" class="btn"  [disabled]="!loginForm.valid" (click)=" login()">Submit</button><br><br>
+            <a > Don't have an account?</a> <a class="btn-sign" (click)=" signUp()">Sign up </a>
         </div>
         </div>
     </form>
     </body>
-     
+
+    <!-- "name": "Santosh",
+       "pan":"CTGPP2421P"
+      "city": "pune"
+      "email": "santosg@12gamil.com",
+      "mobileNo": "9860908859",
+      "gender": "male",
+      "password": "Santosh1",
+      "confirmPassword":"Santosh1",
+      "Tnc":true
       -->
+      

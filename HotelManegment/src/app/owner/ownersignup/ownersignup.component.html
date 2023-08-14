@@ -16,23 +16,171 @@
          
         <h2>Sign Up</h2>        
     <div class="content">
-        <input type="text" class="input" placeholder="UserName" formControlName="userName">
-        <input type="text" class="input" placeholder="Name" formControlName="name">
-        <input type="text" class="input" placeholder="MobailNo" formControlName="mobNo">
-        <input type="text" class="input" placeholder="Pancard No" formControlName="pan">
-        <input type="text" class="input" placeholder="Password" formControlName="password">
-        <input type="text" class="input" placeholder="Email" formControlName="email">
-        &nbsp;<a class="radio">Gender</a><br>
+        <input type="text" class="input" placeholder="UserName*" formControlName="userName">
+        <input type="text" class="input" placeholder="Name*" formControlName="name">
+        
+      <mat-error class="err" *ngIf="signinform.get('name')?.errors?.['required'] 
+               && !signinform.get('name')?.valid
+               && signinform.get('name')?.touched">
+          Name is required
+      </mat-error>
+      <mat-error class="err" *ngIf="signinform.get('name')?.errors?.['pattern']">
+          Enter Alphabets Only
+      </mat-error>
+      <mat-error class="err" *ngIf="signinform.get('name')?.errors?.['minlength'] 
+      && !signinform.get('fullName')?.errors?.['pattern']">
+         Name must contain 10 Alphabets
+      </mat-error>
+      <mat-error class="err" *ngIf="signinform.get('name')?.errors?.['whiteSpace'] && 
+      !signinform.get('name')?.errors?.['minlength'] && 
+      !signinform.get('name')?.errors?.['pattern']">
+          name should not contain white space</mat-error>
+      <!-- <br><br> -->
+        <input type="text" class="input" placeholder="MobailNo*" formControlName="mobNo">
+         
+       <mat-error class="err" *ngIf="signinform.get('mobNo')?.errors?.['required'] 
+                && !signinform.get('mobNo')?.valid
+                && signinform.get('mobNo')?.touched">
+           Number is required
+       </mat-error>
+       <mat-error class="err" *ngIf="signinform.get('mobNo')?.errors?.['pattern']">
+           Enter Number Only
+       </mat-error>
+       <mat-error class="err" *ngIf="signinform.get('mobNo')?.errors?.['minlength'] 
+       && !signinform.get('mobNo')?.errors?.['pattern']">
+           Minimum 10 Number
+       </mat-error>
+       <mat-error class="err" *ngIf="signinform.get('mobNo')?.errors?.['maxlength'] && 
+       !signinform.get('mobNo')?.errors?.['minlength'] && 
+       !signinform.get('mobNo')?.errors?.['pattern']">
+       Name must Maximum 10 Number</mat-error>
+       <!-- <br><br> -->
+        
+        <input type="text" class="input" placeholder="Pancard No*" formControlName="pan">
+         
+       <mat-error class="err" *ngIf="signinform.get('pan')?.errors?.['required'] 
+                && !signinform.get('pan')?.valid
+                && signinform.get('pan')?.touched">
+           Number is required
+       </mat-error>
+       <mat-error class="err" *ngIf="signinform.get('pan')?.errors?.['pattern']">
+            Please check the Number
+       </mat-error>
+       
+        <input type="text" class="input" placeholder="Password*" formControlName="password">
+        <mat-error class="err" *ngIf="signinform.get('password')?.errors?.['required'] 
+               && !signinform.get('password')?.valid
+               && signinform.get('password')?.touched">
+          Name is required
+      </mat-error>
+      <mat-error class="err" *ngIf="signinform.get('password')?.errors?.['pattern']">
+          Enter this Abcd@123 pattern
+      </mat-error>
+      <mat-error class="err" *ngIf="signinform.get('password')?.errors?.['minlength'] 
+      && !signinform.get('password')?.errors?.['pattern']">
+      password must contain be 6 Digit
+      </mat-error>
+        <input type="text" class="input" placeholder="Email*" formControlName="email">
+         
+       <mat-error class="err" *ngIf="signinform.get('email')?.errors?.['required'] 
+                && !signinform.get('email')?.valid
+                && signinform.get('email')?.touched">
+           Email is required
+       </mat-error>
+       <mat-error class="err" *ngIf="signinform.get('email')?.errors?.['pattern']">
+            Please check the Email
+       </mat-error><br>
+        &nbsp;<a class="radio">Gender*</a><br>
         <input type="radio"  value="male"   formControlName="gender"><a>Male</a>&nbsp;
         <input type="radio"  value="female"  formControlName="gender"><a>Female </a>&nbsp;
         <input type="radio"  value="Other"   formControlName="gender"><a>Other</a>&nbsp;
           
         <button type="submit" class="btn" [disabled]="!signinform.valid" (click)="submit()">Submit</button><br><br>
-        <a class="btn-sign" (click)="signIn()">Login-Btn</a>
+        <a> Have an account?  </a><a class="btn-sign" (click)="signIn()">Login-Btn</a>
     </div>
     </div>
 </form>
 </body>  
+
+
+
+<!-- ----------------------------------------------------- -->
+
+<!-- <p>mosin</p>
+<div>  
+  <h2 class="form-heading"> Sign Up Form</h2>
+  <form class="signup-form-container" [formGroup]="signUpForm">
+
+      <label>Name</label><br>
+      <input type="text" formControlName="fullName" appChagsOnly><br>
+      <span *ngIf="!signUpForm.get('fullName')?.touched 
+       && !signUpForm.get('fullName')?.valid
+       && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here
+      </span>
+      <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['required'] 
+               && !signUpForm.get('fullName')?.valid
+               && signUpForm.get('fullName')?.touched">
+          Name is required
+      </span>
+      <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['pattern']">
+          Enter Alphabets Only
+      </span>
+      <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['minlength'] 
+      && !signUpForm.get('fullName')?.errors?.['pattern']">
+         Name must contain 10 Alphabets
+      </span>
+      <span class="err" *ngIf="signUpForm.get('fullName')?.errors?.['whiteSpace'] && 
+      !signUpForm.get('fullName')?.errors?.['minlength'] && 
+      !signUpForm.get('fullName')?.errors?.['pattern']">
+          name should not contain white space</span>
+      <br><br>
+      
+      <label>MobNo</label><br>
+      <input type="text" formControlName="mobNo"><br>
+      <span *ngIf="!signUpForm.get('fullName')?.touched 
+      && !signUpForm.get('fullName')?.valid
+      && !signUpForm.get('fullName')?.dirty">Hint:Enter Your Full Name here
+     </span>
+      <span *ngIf="signUpForm.get('mobNo')?.errors?.['pattern']
+              && signUpForm.get('mobNo')?.touched " class="err">
+          Mobile no should be in Integers</span>
+      <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['minlength']
+                && !signUpForm.get('mobNo')?.errors?.['pattern']">
+          Please Enter Minimum 10 Digit Mobile Number
+      </span>
+      <span class="err" *ngIf="signUpForm.get('mobNo')?.errors?.['maxlength'] 
+                           && !signUpForm.get('mobNo')?.errors?.['pattern']">
+          Please Enter Maximum 10 Digit Mobile Number
+      </span><br><br>
+
+      <label>Gender</label><br>
+      <input type="radio" value="Female" formControlName="gender"> Female <br>
+      <input type="radio" value="Male"  formControlName="gender"> Male <br><br>
+     
+      <label>City</label><br>
+      <input type="text" formControlName="city"><br><br>
+
+      <label>Email Id</label><br>
+      <input type="text" formControlName="email"><br>
+
+      <label>User Name</label><br>
+      <input type="text" formControlName="userName"><br>
+
+      <label>Address</label><br>
+      <input type="text" formControlName="address"><br>
+      <label>Password</label><br>
+    <input type="text" formControlName="password"><br>
+
+    <label>Confirm Password</label><br>
+    <input type="text" formControlName="confirmPassword"><br>
+    <br> -->
+
+
+
+<!-- ------------------------------------------------------------ -->
+
+
+
 
 <!-- <div class="container">
     <mat-toolbar >

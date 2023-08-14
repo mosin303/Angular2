@@ -1,5 +1,90 @@
 {
-  "admin": [],
+  "admin": [
+    {
+      "userName": "mosin",
+      "name": "mosin mulla",
+      "pan": "djdsh4586h",
+      "city": "pune",
+      "email": "mosin@gamil.com",
+      "mobile": "4785961254",
+      "gender": "male",
+      "password": "mosin123",
+      "confirmPassword": "mosin123",
+      "id": 1
+    },
+    {
+      "userName": "salman",
+      "name": "salman mulla",
+      "pan": "SADFS1451D",
+      "city": "pune",
+      "email": "salman123@gmail.com",
+      "mobile": "4785964578",
+      "gender": "male",
+      "password": "salman123",
+      "confirmPassword": "salman123",
+      "id": 2
+    },
+    {
+      "userName": "salman",
+      "name": "salman",
+      "pan": "bhgjhjhjj",
+      "city": "hhgguh",
+      "email": "nhjjjmik,ll",
+      "mobile": "5555636653",
+      "gender": "male",
+      "password": "salman123",
+      "confirmPassword": "salman123",
+      "id": 3
+    },
+    {
+      "userName": "salman",
+      "name": "salman",
+      "pan": "bhgjhjhjj",
+      "city": "hhgguh",
+      "email": "nhjjjmik,ll",
+      "mobile": "5555636653",
+      "gender": "male",
+      "password": "salman123",
+      "confirmPassword": "salman123",
+      "id": 4
+    },
+    {
+      "userName": "mosin",
+      "name": "mosin",
+      "pan": "125455666",
+      "city": "umadi",
+      "email": "mkojjiijjjjj",
+      "mobile": "4859698266",
+      "gender": "male",
+      "password": "mosin123",
+      "confirmPassword": "mosin123",
+      "id": 5
+    },
+    {
+      "userName": "mosin",
+      "name": "mosin",
+      "pan": "45856363",
+      "city": "pune",
+      "email": "smkjs@djjakjk",
+      "mobile": "2589631478",
+      "gender": "male",
+      "password": "mosin1233",
+      "confirmPassword": "mosin123",
+      "id": 6
+    },
+    {
+      "userName": "mosin",
+      "name": "mosin",
+      "pan": "mkjnh4563",
+      "city": "pune",
+      "email": "mosin@g.com",
+      "mobile": "5869659588",
+      "gender": "male",
+      "password": "Mosin@123",
+      "confirmPassword": "Mosin@123",
+      "id": 7
+    }
+  ],
   "user": [
     {
       "Username": "mosin",
@@ -28,6 +113,256 @@
       "Email": "mosinmulla553@gmail.com",
       "Gender": "male",
       "id": 3
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "2526663565",
+      "Pan": "ssdfs4596d",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 4
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "2526663565",
+      "Pan": "ssdfs4596d",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 5
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5848569696",
+      "Pan": "sadaf2586k",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 6
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5848569696",
+      "Pan": "sadaf2586k",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 7
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5848569696",
+      "Pan": "sadaf2586k",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 8
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5848569696",
+      "Pan": "sadaf2586k",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 9
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5848569696",
+      "Pan": "sadaf2586k",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 10
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5848569696",
+      "Pan": "sadaf2586k",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 11
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "4857961236",
+      "Pan": "bhjnm2636m",
+      "Password": "Mosin@122",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 12
+    },
+    {
+      "Username": "salman",
+      "Name": "salman",
+      "Mobile": "8496585969",
+      "Pan": "njmkg2563n",
+      "Password": "Salman@123",
+      "Email": "salman@gmail.com",
+      "Gender": "male",
+      "id": 13
+    },
+    {
+      "Username": "salman",
+      "Name": "salman",
+      "Mobile": "8496585969",
+      "Pan": "njmkg2563n",
+      "Password": "Salman@123",
+      "Email": "salman@gmail.com",
+      "Gender": "male",
+      "id": 14
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5485593655",
+      "Pan": "njkmh1452d",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 15
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5485593655",
+      "Pan": "njkmh1452d",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 16
+    },
+    {
+      "Username": "salman",
+      "Name": "salman",
+      "Mobile": "5263987452",
+      "Pan": "njmkh4521s",
+      "Password": "Salman@123",
+      "Email": "salman@g.com",
+      "Gender": "male",
+      "id": 17
+    },
+    {
+      "Username": "salman",
+      "Name": "salman",
+      "Mobile": "5263987452",
+      "Pan": "njmkh4521s",
+      "Password": "Salman@123",
+      "Email": "salman@g.com",
+      "Gender": "male",
+      "id": 18
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5986478695",
+      "Pan": "njmkh4522n",
+      "Password": "Mosin@152",
+      "Email": "mosin@g.com",
+      "Gender": "male",
+      "id": 19
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5986478695",
+      "Pan": "njmkh4522n",
+      "Password": "Mosin@152",
+      "Email": "mosin@g.com",
+      "Gender": "male",
+      "id": 20
+    },
+    {
+      "Username": "shrikant",
+      "Name": "shrikant",
+      "Mobile": "5283848663",
+      "Pan": "mjkkk5236l",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmal.com",
+      "Gender": "male",
+      "id": 21
+    },
+    {
+      "Username": "shrikant",
+      "Name": "shrikant",
+      "Mobile": "5283848663",
+      "Pan": "mjkkk5236l",
+      "Password": "Mosin@123",
+      "Email": "mosin@gmal.com",
+      "Gender": "male",
+      "id": 22
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5645869656",
+      "Pan": "xjksd5263s",
+      "Password": "Mosin@123",
+      "Email": "mosin@.g.com",
+      "Gender": "male",
+      "id": 23
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5645869656",
+      "Pan": "xjksd5263s",
+      "Password": "Mosin@123",
+      "Email": "mosin@.g.com",
+      "Gender": "male",
+      "id": 24
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "8555889696",
+      "Pan": "pdfgh5874l",
+      "Password": "Mosin@789",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 25
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "8555889696",
+      "Pan": "pdfgh5874l",
+      "Password": "Mosin@789",
+      "Email": "mosin@gmail.com",
+      "Gender": "male",
+      "id": 26
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5236325256",
+      "Pan": "nmjmk4525d",
+      "Password": "Mosin@123",
+      "Email": "mosin@g.com",
+      "Gender": "male",
+      "id": 27
+    },
+    {
+      "Username": "mosin",
+      "Name": "mosin",
+      "Mobile": "5899658445",
+      "Pan": "snmnC5586d",
+      "Password": "Mosin@123",
+      "Email": "mosin@g.com",
+      "Gender": "male",
+      "id": 28
     }
   ],
   "owner": [
@@ -115,17 +450,6 @@
   "hotel": [
     {
       "OwnerName": "salman",
-      "OwnerMobNo": "7896541236",
-      "HotelName": "hotel  five star",
-      "HotelAddress": "Mina Rood  ,Minar Hotel, mumbai",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "52",
-      "Image": "/assets/image/hotel-4.jpg",
-      "id": 3
-    },
-    {
-      "OwnerName": "salman",
       "OwnerMobNo": "8754269852",
       "HotelName": "Uadpi Hotel",
       "HotelAddress": "Bijapur",
@@ -145,17 +469,6 @@
       "RoomAvailable": "80",
       "Image": "/assets/image/hotel-5.jpg",
       "id": 4
-    },
-    {
-      "OwnerName": "salman",
-      "OwnerMobNo": "7896541236",
-      "HotelName": "hotel  five star",
-      "HotelAddress": "Mina Rood  ,Minar Hotel, mumbai",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "52",
-      "Image": "/assets/image/hotel-4.jpg",
-      "id": 8
     },
     {
       "OwnerName": "salman",
@@ -181,17 +494,6 @@
     },
     {
       "OwnerName": "salman",
-      "OwnerMobNo": "7896541236",
-      "HotelName": "hotel  five star",
-      "HotelAddress": "Mina Rood  ,Minar Hotel, mumbai",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "52",
-      "Image": "/assets/image/hotel-7.jpg",
-      "id": 13
-    },
-    {
-      "OwnerName": "salman",
       "OwnerMobNo": "8754269852",
       "HotelName": "Uadpi Hotel",
       "HotelAddress": "Bijapur",
@@ -214,17 +516,6 @@
     },
     {
       "OwnerName": "salman",
-      "OwnerMobNo": "7896541236",
-      "HotelName": "hotel  five star",
-      "HotelAddress": "Mina Rood  ,Minar Hotel, mumbai",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "52",
-      "Image": "/assets/image/hotel-4.jpg",
-      "id": 18
-    },
-    {
-      "OwnerName": "salman",
       "OwnerMobNo": "8754269852",
       "HotelName": "Uadpi Hotel",
       "HotelAddress": "Bijapur",
@@ -244,28 +535,6 @@
       "RoomAvailable": "500",
       "Image": "/assets/image/hotel-13.jpg",
       "id": 22
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "7898548574",
-      "HotelName": "sahi Hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "08888696921",
-      "HotelMenu": "veg",
-      "RoomAvailable": "50",
-      "Image": "/assets/image/hotel-8.jpg",
-      "id": 23
-    },
-    {
-      "OwnerName": "mosin",
-      "OwnerMobNo": "987458697458",
-      "HotelName": "taj hotel",
-      "HotelAddress": "umadi",
-      "HotelMobile": "585874855",
-      "HotelMenu": "veg",
-      "RoomAvailable": "58",
-      "Image": "/assets/image/hotel-11.jpg",
-      "id": 24
     },
     {
       "OwnerName": "mosin",
@@ -376,6 +645,105 @@
       "RoomAvailable": 155,
       "Image": "/assets/newimg/hotel-11.jpg",
       "id": 36
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 8574959684,
+      "HotelName": "shahi  Hotel",
+      "HotelAddress": "umad",
+      "HotelMobile": 5874968574,
+      "HotelMenu": "Veg",
+      "RoomAvailable": 50,
+      "Image": "/assets/newimg/hotel-15.jpg",
+      "id": 37
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 8574959684,
+      "HotelName": "shahi  Hotel",
+      "HotelAddress": "umad",
+      "HotelMobile": 5874968574,
+      "HotelMenu": "Veg",
+      "RoomAvailable": 50,
+      "Image": "/assets/newimg/hotel-15.jpg",
+      "id": 38
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 8574959684,
+      "HotelName": "shahi  Hotel",
+      "HotelAddress": "umad",
+      "HotelMobile": 5874968574,
+      "HotelMenu": "Veg",
+      "RoomAvailable": 50,
+      "Image": "/assets/newimg/hotel-15.jpg",
+      "id": 39
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 47859658744,
+      "HotelName": "golad Hotel",
+      "HotelAddress": "pune",
+      "HotelMobile": 4857965874,
+      "HotelMenu": "Non-Vag",
+      "RoomAvailable": 50,
+      "Image": "/assets/newimg/hotel-30.jpg",
+      "id": 40
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 87458964785,
+      "HotelName": "Goladn Hotel",
+      "HotelAddress": "pune",
+      "HotelMobile": 4785968574,
+      "HotelMenu": "Non-Vag",
+      "RoomAvailable": 20,
+      "Image": "/assets/newimg/hotel-20.jpg",
+      "id": 41
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 5879685744,
+      "HotelName": "mosin Hotel",
+      "HotelAddress": "pune",
+      "HotelMobile": 6985247415,
+      "HotelMenu": "Non-Vag",
+      "RoomAvailable": 50,
+      "Image": "/assets/newimg/hotel-15.jpg",
+      "id": 42
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 4785968574,
+      "HotelName": "suprsatr Hotel",
+      "HotelAddress": "mumbai",
+      "HotelMobile": 2589631478,
+      "HotelMenu": "Non-Veg",
+      "RoomAvailable": 50,
+      "Image": "/assets/newimg/hotel-2.jpg",
+      "id": 43
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 4785965585,
+      "HotelName": "salma Hotel",
+      "HotelAddress": "pune",
+      "HotelMobile": 2541789632,
+      "HotelMenu": "Non-Veg",
+      "RoomAvailable": 140,
+      "Image": "/assets/image/hotel-8.jpg",
+      "id": 44
+    },
+    {
+      "OwnerName": "mosin",
+      "OwnerMobNo": 8574965874,
+      "HotelName": "moon Hotel",
+      "HotelAddress": "pune",
+      "HotelMobile": 2589631478,
+      "HotelMenu": "Non-Veg",
+      "RoomAvailable": 20,
+      "Image": "/assets/newimg/hotel-1.jpg",
+      "id": 45
     }
   ],
   "hotelBooking": [
@@ -462,6 +830,48 @@
       "Mobile": "545558585425",
       "Amount": 100,
       "id": 12
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": 596484865665,
+      "Mobile": 54586932145,
+      "Amount": 26,
+      "id": 13
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": 5896847158,
+      "Mobile": 1425639856,
+      "Amount": 400,
+      "id": 14
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": 5896898995,
+      "Mobile": 556696596,
+      "Amount": 526,
+      "id": 15
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": 585485688546,
+      "Mobile": 1478529636,
+      "Amount": 40000,
+      "id": 16
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": 585485688546,
+      "Mobile": 1478529636,
+      "Amount": 40000,
+      "id": 17
+    },
+    {
+      "UserName": "mosin",
+      "AdharNo": 585485688546,
+      "Mobile": 1478529636,
+      "Amount": 40000,
+      "id": 18
     }
   ]
 }

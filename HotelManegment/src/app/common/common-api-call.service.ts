@@ -27,6 +27,12 @@ return this.http.post(url,formdata);
   getApiCall(endPoint:string){
     let url = this.url + endPoint ;
     return this.http.get(url);
+
+  }
+  getApiCallById(endPoint:string,id:any){
+    let url = this.url + endPoint + '/' + id;
+    return this.http.get(url,);
+    
   }
   
   patchApiCall(endPoint:any,data:any,id:number) {

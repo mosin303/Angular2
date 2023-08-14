@@ -16,5 +16,15 @@ export class CommonService {
   warningToaster( msg:any, title:any, configuration:any ){
     this.toastrService.warning( msg, title, configuration)
 }
+successToastar(){
+this.toastrService.success(`SignUp`,`Successful`)
+}
+
+whiteSpaceValidator(name:any){
+  let data = name.value;
+  let newdata = data?.trim();
+  let isValid = data.length != newdata.length ;
+  return isValid ? {whiteSpace:true} : null
+}
 }
 
