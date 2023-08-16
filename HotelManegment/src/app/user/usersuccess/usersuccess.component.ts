@@ -17,7 +17,7 @@ export class UsersuccessComponent {
   bookNow!:FormGroup;
   showbookNow:boolean = false;
 searchBoxVal: any;
- 
+imageUrls=[""];
    
 
   
@@ -37,7 +37,7 @@ searchBoxVal: any;
        
         
     } 
-
+    
 logout(){
   this.router.navigateByUrl('home')
 }
@@ -48,47 +48,7 @@ booknow(){
   }
 }
 
-  // ---------------------------booking---------------
-
- 
-//  formDetl(){
-//   this.bookNow = this.fB.group({
-//     userName:['',[Validators.required]],
-//     adharno:['',[Validators.required,Validators.minLength(12),Validators.maxLength(12)]],
-//      mobNo:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
-//     amount:['',[Validators.required]],
-//   })
-//  }
-
-// async submit(){
   
-//    let endPoint = 'hotelBooking';
-  
-//   let request = {
-//     UserName : this.bookNow.value.userName,
-//     AdharNo : this.bookNow.value.adharno,
-//     Mobile : this.bookNow.value.mobNo,
-//     Amount : this.bookNow.value.amount,
-//   }
-//    await this.apiCallService.postApicall(endPoint,request).toPromise() 
-//      console.log(this.bookNow.value);
-     
-    
-  
-//   this.toaster.success(`Booking `,`Successful`)
 
-//    this.router.navigateByUrl('userSuccess');
-    
-    
-//  }
-//  booknow(){
-//   this.showbookNow = !this.showbookNow;
-//   this.formDetl();
-// }
-
-
-
-
-// }
  
  
