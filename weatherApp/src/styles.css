@@ -1,2 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.css';
+@import "~weather-icons/css/weather-icons.css";
+:root{
+    --blue-1:#3C429E;
+    --blue-2:#3C429D;
+    --yellow-1:#FAC742;
+    --white:#FFF;
+    --grey-1:#EDEDED;
+    --shadow-light:rgba(0, 0, 0, 0.3);
+    --shadow-dark: rgba(255, 255, 255, 0.3);
+    
+
+
+}
+
+ 

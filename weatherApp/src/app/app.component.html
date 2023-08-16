@@ -1,54 +1,114 @@
 <nav class="navbar bg-primary" data-bs-theme="dark">
    <div class="container-fluid">
     <a class="navbar-brand" >Weather</a>
+      
+      <div class="row row-cols-lg-auto g-3 align-items-center">
      
+        <input type="text" class="input" value="mumbai" placeholder="City" #inp>
+       
+      <button  class="btn btn-primary" (click)="getData(inp.value)">Submit</button>
+    </div>
   </div>
 </nav><br><br>
- 
-  <div class="row row-cols-lg-auto g-3 align-items-center">
+
+<h5 class="card-title"> {{inp.value}}</h5>
+<div class="body">
+   
+   
+   
      
-      <input type="text"  value="mumbai" placeholder="City" #inp>
-    </div>
+     <br><br><br><br>
+     <div class="card text-bg-dark" style="width: 45rem;" *ngIf="weatherData">
+      <img src="/assets/images/weather-3.jpg" class="card-img-top" alt="...">
+      <div class="card-img-overlay"> 
+        <table *ngIf="weatherData" >
+          <tr>
+              <th><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-clouds" viewBox="0 0 16 16" style="color: #fefafa;">
+                <path d="M16 7.5a2.5 2.5 0 0 1-1.456 2.272 3.513 3.513 0 0 0-.65-.824 1.5 1.5 0 0 0-.789-2.896.5.5 0 0 1-.627-.421 3 3 0 0 0-5.22-1.625 5.587 5.587 0 0 0-1.276.088 4.002 4.002 0 0 1 7.392.91A2.5 2.5 0 0 1 16 7.5z"/>
+                <path d="M7 5a4.5 4.5 0 0 1 4.473 4h.027a2.5 2.5 0 0 1 0 5H3a3 3 0 0 1-.247-5.99A4.502 4.502 0 0 1 7 5zm3.5 4.5a3.5 3.5 0 0 0-6.89-.873.5.5 0 0 1-.51.375A2 2 0 1 0 3 13h8.5a1.5 1.5 0 1 0-.376-2.953.5.5 0 0 1-.624-.492V9.5z"/>
+              </svg></th>
+              <th><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-thermometer-sun" viewBox="0 0 16 16" style="color: red; ">
+                <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5z"/>
+                <path d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1zm5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0zM8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5zM12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5zm-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708zM8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+              </svg></th>
+              <th> <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-thermometer-low" viewBox="0 0 16 16" style="color: rgba(5, 240, 115, 0.897);">
+                <path d="M9.5 12.5a1.5 1.5 0 1 1-2-1.415V9.5a.5.5 0 0 1 1 0v1.585a1.5 1.5 0 0 1 1 1.415z"/>
+                <path d="M5.5 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM8 1a1.5 1.5 0 0 0-1.5 1.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0l-.166-.15V2.5A1.5 1.5 0 0 0 8 1z"/>
+              </svg></th>
+              
+              </tr>
+              <tr>
+                <td>{{weatherData.name}}</td>
+                <td> {{weatherData.main.temp}}°C</td>
+                <td>{{weatherData.main.temp_min}}°C</td>
+                
+              </tr>
+              <br>
+              <tr>
+              <th><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-thermometer-sun" viewBox="0 0 16 16" style="color: rgba(240, 5, 5, 0.897);">
+                <path d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5z"/>
+                <path d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0V2.5zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1zm5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zm4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0zM8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5zM12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5zm-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708zM8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5z"/>
+              </svg></th>
+              <th> Pressure</th>
+              <th>Humidity</th>
+             
+               
+          </tr>
+         
+          <tr> 
+            <td> {{weatherData.main.temp_max}}°C</td>
+             <td> {{weatherData.main.pressure}}N/m2</td>
+             <td>{{weatherData.main.humidity}}g.m-3</td>
+             
+             </tr><br>
+
+             <tr> 
+              <th> WindSpeed</th>
+              <th> Country</th>
+            </tr>
+            <tr>
+              <td>{{weatherData.wind.speed}}m/s</td>
+              <td>{{weatherData.sys.country}}</td>
+            </tr>
+          </table>
+        
+       </div>
+
+     
+</div>
+</div>
   
-  <div class="col-12">
-    <button  class="btn btn-primary" (click)="getData(inp.value)">Submit</button>
-  </div>
-  
-  <div class="card text-bg-dark">
-    <img src="../assets/weathier-3.jpg" class="card-img" alt="...">
-    <div class="card-img-overlay">
-      <h5 class="card-title">{{inp.value}}</h5>
-      <p> <b>City Name :---- </b>{{weatherData.name}}</p>
-<p> <b>Tempreture  :----  </b>{{weatherData.main.temp}}°C</p><i class="bi bi-cloud-sun-fill"></i>
-<p> <b>Min Tempreture  :----  </b>{{weatherData.main.temp_min}}°C</p>
-<p> <b>Max Tempreture  :----  </b>{{weatherData.main.temp_max}}°C</p>
-<p> <b>Pressure  :---- </b> {{weatherData.main.pressure}}N/m2</p>
-<p> <b>Humidity  :----  </b>{{weatherData.main.humidity}}g.m-3</p>
-<p> <b>Wind Speed  :----  </b>{{weatherData.wind.speed}}m/s</p>
-<p> <b>Country  :----  </b>{{weatherData.sys.country}}</p>
+      
+      
+
+          <!-- <div class="columns">
+             
+            <ul class="price">
+             <li>    <b>City Name:  </b>{{weatherData.name}}</li>
+             <li> <b>Tempreture: </b>{{weatherData.main.temp}}°C</li>
+            <li><b>Min Tempreture: </b>{{weatherData.main.temp_min}}°C</li>
+            <li><b>Max Tempreture: </b>{{weatherData.main.temp_max}}°C</li>
+            <li><b>Pressure:</b> {{weatherData.main.pressure}}N/m2 </li>
+            <li><b>Humidity: </b>{{weatherData.main.humidity}}g.m-3</li>
+            <li><b>Wind Speed: </b>{{weatherData.wind.speed}}m/s</li>
+            <li><b>Country: </b>{{weatherData.sys.country}} </li>
+              
+            </ul>
+          </div> -->
+
+        
        
-    </div>
-  </div>
+
+
+    
+      
+<!-- ----------------------------------------------------------------------------- -->
+
+        
+  
+  
  
+  
 
-<!-- -------------------------------------------------------------- -->
-<!-- <div class="header">
-  <div class="logo">Weather App</div>
-  <div class="container">
-    <input value="mumbai" type="text" #inp>
-    <button (click)="getData(inp.value)">Fetch Data</button>
-  </div>
-</div>
-
-<div class="box" *ngIf="weatherData">
-    <p> <b>City Name :---- </b>{{weatherData.name}}</p>
-    <p> <b>Tempreture  :----  </b>{{weatherData.main.temp}}°C</p>
-    <p> <b>Min Tempreture  :----  </b>{{weatherData.main.temp_min}}°C</p>
-    <p> <b>Max Tempreture  :----  </b>{{weatherData.main.temp_max}}°C</p>
-    <p> <b>Pressure  :---- </b> {{weatherData.main.pressure}}N/m2</p>
-    <p> <b>Humidity  :----  </b>{{weatherData.main.humidity}}g.m-3</p>
-    <p> <b>Wind Speed  :----  </b>{{weatherData.wind.speed}}m/s</p>
-    <p> <b>Country  :----  </b>{{weatherData.sys.country}}</p>
-</div>
-
-<br><br><br><br> -->
+ <!-- -------------------------------------------------------------- -->
+  

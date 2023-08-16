@@ -1,0 +1,83 @@
+/* .card-in{
+    margin-right: 2px;
+  height: 400px;
+  width: 4000px;
+}
+.example-card{
+    position: relative;
+    padding: 60px 15px;
+    width: 570px;
+    height: 300px;
+    background: #0c0116;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 0px rgb(116, 119, 114);
+    border-radius: 5px;
+    background-image: url('../assets/weather-2.jpg');
+
+}*/ 
+.body{
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+::ng-deep body{
+  background-image: url("../assets/images/weather-4.jpg"); 
+   height: 100%;
+   width: 100%;
+   background-size: cover;
+ /* background-repeat: no-repeat; */
+}
+/* .container{
+  background-image: url("../assets/images/weather-1.jpg") ;
+} */
+
+.card-img-overlay{
+  color: #000;
+  text-align: center;
+  font-size: 20px;
+}
+
+.input {
+  height: 50px;
+}
+
+.btn{
+  height: 50px;
+}
+  
+
+.card-body{
+  text-align: center;
+}
+.card-title{
+  text-align: center;
+  font-size: 40px;
+  color: darkgreen;
+}
+ 
+/* responsive-table.component.css */
+ 
+@media screen and (max-width: 350px) {
+  th, td {
+    display: block;
+  }
+
+  th {
+    text-align: center;
+  }
+ 
+  td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+  }
+}
+
+ 
+  
+ 
+  
