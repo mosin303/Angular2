@@ -17,6 +17,7 @@ export class NewhotelComponent {
   journey!: string;
   selectedImage: File | null = null;
   dataById: any;
+  hotelImages: any;
    
   constructor(private fb: FormBuilder,
     private router:Router,
@@ -44,7 +45,8 @@ export class NewhotelComponent {
     hotelMobile: [this.dataById ? this.dataById.HotelMobile :'', Validators.required ],
     hotelMenu: [this.dataById ? this.dataById.HotelMenu :'', Validators.required],
     roomAvailable: [this.dataById ? this.dataById.RoomAvailable :'', Validators.required ],
-    image: [this.dataById ? this.dataById.Image :"/assets/newimg/hotel-10.jpg"],
+    image: [this.dataById ? this.dataById.Image :''],
+    // "/assets/newimg/hotel-10.jpg"
   });
 }
 
@@ -64,7 +66,7 @@ let request = {
           HotelMobile : this.hotelForm.value.hotelMobile,
           HotelMenu : this.hotelForm.value.hotelMenu,
           RoomAvailable : this.hotelForm.value.roomAvailable,
-          Image: this.hotelForm.value.image,
+          Image: this.hotelImages 
        }
        
      if(this. editId){
@@ -82,9 +84,20 @@ this.apiCallService.postApiCall(endpoint,request).subscribe((resp:any)=>{
  
 }
 this.router.navigateByUrl('owner/ownerSuccess');  
-// this.toaster.success('Hotel data Successfull', "Congratulations!!")
-this.toaster.success(`Hotel data Successfull ${this.hotelForm.value[0].ownerName}`,`Successfully  `)
+this.toaster.success('Hotel data Successfull', "Congratulations!!")
+// this.toaster.success(`Hotel data Successfull ${this.hotelForm.value[0].ownerName}`,`Successfully  `)
    
+}
+
+
+
+onFileSelected(event:any){
+  let images =[...event.target.files]
+
+  let fileNames = images.map((item:any)=>{
+    return "assets/newimg/" + item.name
+  })
+  this.hotelImages = [...fileNames]
 }
 
      ngOnDestroy(){ 

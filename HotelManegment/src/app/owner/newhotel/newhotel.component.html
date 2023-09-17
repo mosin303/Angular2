@@ -20,8 +20,13 @@
                   </mat-select>
 
                 <input type="number" class="input" placeholder="roomAvailable" formControlName="roomAvailable">
-                <input type="text" class="input" placeholder="imageUrl" formControlName="image">
-                <p>Change the last number in imageUrl 1 to 41 only </p>
+                <!-- <input type="text" class="input" placeholder="imageUrl" formControlName="image">
+                <p>Change the last number in imageUrl 1 to 41 only </p> -->
+
+                 
+                    <input type="file" formControlName="image" multiple accept="image/*" (change)="onFileSelected($event)">
+                    
+                   
 
                 <button type="submit" class="btn" [disabled]="!hotelForm.valid" (click)="onSubmit()">{{this. editId ?
                     'Update':'Submit'}}</button>
