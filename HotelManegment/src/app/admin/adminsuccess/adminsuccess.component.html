@@ -1,5 +1,5 @@
 <div class="container">
-    <mat-toolbar>
+    <mat-toolbar color="primary">
         <span class="example-spacer">MY HOTALS </span>
          
         <!-- <button mat-raised-button color="accent" routerLink="/home">Home</button> -->
@@ -20,7 +20,7 @@
   </mat-form-field> -->
 
   <div  *ngIf="showTable">
-    <h1>hotel list</h1>
+    
   <div *ngIf ="hotelData" class="table-container">
     <mat-form-field class="example-full-width">
       <mat-label>Search here</mat-label>
@@ -29,8 +29,8 @@
 
      <table > 
        
-       <tr colsapan="3">
-        <h1> hotel list </h1></tr>   
+       <tr>
+        <h1  colspan="4"> hotel list </h1></tr>   
       
       <tr>
         
@@ -53,7 +53,7 @@
 </div>
 
 <div  *ngIf="!showTable">
-  <h1>HotalBooking list </h1>
+   
   <div *ngIf="formData" class="table-container"> 
     <mat-form-field class="example-full-width">
       <mat-label>Search here</mat-label>
@@ -61,7 +61,7 @@
     </mat-form-field>
 
     <table>
-        <tr> <h1>HotalBooking list </h1></tr>
+       <tr> <h1 colspan="4" >HotalBooking list </h1></tr>
        <tr>
         <th *ngFor="let heading of tableBookNow ">{{heading}}</th>
        </tr> 

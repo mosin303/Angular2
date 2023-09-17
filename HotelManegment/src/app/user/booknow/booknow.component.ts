@@ -54,7 +54,7 @@ async submit(){
 
   this.toaster.success(`wel-come ${this.bookNow.value.userName}`,`Successfully login `)
 
-   
+  this.router.navigateByUrl('userSuccess');
     
     
  }
